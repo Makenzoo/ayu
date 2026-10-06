@@ -244,6 +244,19 @@
       .news-more { color:#ff5065; font-size:16px; margin:26px 0 0 33px; }
       .news-empty { min-height:360px; background:#fff; padding:35px; color:#25303b; }
       .news-empty a { display:block; margin-top:15px; color:#f04463; font-weight:700; }
+      /* Narrow, divided utility header and the five social marks in the reference. */
+      .utility { font-size:12px; }
+      .utility .container { width:min(1120px,calc(100% - 32px)); justify-content:flex-start; }
+      .utility-nav { height:100%; gap:0; white-space:nowrap; }
+      .utility-nav a { display:flex; align-items:center; height:100%; padding:0 15px; border-right:1px solid rgba(255,255,255,.09); }
+      .utility-nav a:first-child { color:#777c88; padding-left:0; }
+      .socials { margin-left:auto; gap:9px; color:#f6f7f9; }
+      .socials svg { width:14px; height:14px; display:block; fill:currentColor; }
+      .socials .social-instagram svg { fill:none; stroke:currentColor; stroke-width:2; }
+      .socials .social-linkedin svg { width:18px; }
+      .socials .social-youtube svg { width:18px; }
+      .langs { height:100%; margin-left:30px; padding-left:32px; gap:12px; border-left:1px solid rgba(255,255,255,.1); color:#747986; letter-spacing:1px; }
+      .langs .active { color:#834153; }
       .news-aside { min-width:0; }
       .announcement-link { position:relative; display:flex; height:64px; margin:7px 0 39px; border-radius:5px; background:#f4b523; color:#fff; font-size:22px; font-weight:400; }
       .announcement-link:after { content:""; position:absolute; left:calc(50% - 8px); bottom:-14px; border-left:8px solid transparent; border-right:8px solid transparent; border-top:15px solid #f4b523; }
@@ -258,13 +271,14 @@
       .notice-item time:before { content:"▢"; color:#ef4c6a; font-size:17px; vertical-align:-1px; margin-right:7px; }
       .notice-all { border:0; color:#f2a900; font-size:11px; padding:0; margin-top:0; }
       @media(max-width:1250px) { .news-layout{gap:35px;grid-template-columns:minmax(0,2fr) minmax(285px,.85fr)} }
+      @media(max-width:1100px) { .utility-nav a{padding:0 9px}.langs{margin-left:18px;padding-left:18px} }
       @media(max-width:900px) { .news-layout{grid-template-columns:1fr;gap:40px}.news-aside{max-width:460px;margin:auto;width:100%}.news-tools{margin-bottom:28px}.announcement-link{margin-top:0} }
       @media(max-width:650px) { .news .section-title{font-size:26px}.news-wrap{padding-top:36px}.filter-group{gap:6px;width:100%}.filter-btn,.filter-btn:first-child{min-width:0;flex:1;padding:0 5px;height:48px;font-size:10px}.news-cards{grid-template-columns:1fr}.news-card-copy{min-height:155px}.news-more{margin-left:0;font-size:13px}.announcement-link{font-size:18px}.news{padding-bottom:60px} }
     </style>
   </head>
   <body>
     <header>
-      <div class="utility"><div class="container"><nav class="utility-nav"><a href="#">AVESIS</a><a href="#" data-i18n="foreign">Шетелдік студенттер</a><a href="#" data-i18n="applicants">Талапкерлерге</a><a href="#" data-i18n="graduates">Түлек</a><a href="#" data-i18n="quality">Сапасы</a><a href="#" data-i18n="library">Кітапхана</a><a href="#" data-i18n="contactsShort">Жедел байланыстар</a></nav><div class="socials" aria-label="Әлеуметтік желілер"><span>f</span><span>◎</span><span>in</span><span>▶</span></div><div class="langs"><a class="active" href="#" data-lang="kz">KZ</a><a href="#" data-lang="tr">TR</a><a href="#" data-lang="en">EN</a><a href="#" data-lang="ru">RU</a></div></div></div>
+      <div class="utility"><div class="container"><nav class="utility-nav"><a href="#">AVESIS</a><a href="#" data-i18n="foreign">Шетелдік студенттер</a><a href="#" data-i18n="applicants">Талапкерлерге</a><a href="#" data-i18n="graduates">Түлек</a><a href="#" data-i18n="quality">Сапасы</a><a href="#" data-i18n="library">Кітапхана</a><a href="#" data-i18n="contactsShort">Жедел байланыстар</a></nav><div class="socials" aria-label="Әлеуметтік желілер"><span aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3H13c-2.7 0-4.3 1.7-4.3 4.5V10H6v3.4h2.7V21h3.6v-7.6h2.9l.5-3.4h-3.4V7.8c0-1 .3-1.4 1.5-1.4h1.7V3z"/></svg></span><span class="social-instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.8" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></span><span aria-label="X / Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 6.1c-.7.3-1.4.5-2.2.6.8-.5 1.4-1.2 1.7-2.1-.8.5-1.6.8-2.5 1a3.8 3.8 0 0 0-6.5 3.5 3.5 0 0 0-.1 1.7 10.8 10.8 0 0 1-7.9-4 3.8 3.8 0 0 0 1.2 5.1c-.6 0-1.2-.2-1.7-.5v.1c0 1.9 1.3 3.5 3.1 3.8-.5.1-1.1.2-1.7.1.5 1.5 1.9 2.6 3.5 2.6A7.7 7.7 0 0 1 3 16.1a10.7 10.7 0 0 0 5.8 1.7c7 0 10.8-5.8 10.8-10.8v-.5c.8-.5 1.4-1.1 2-1.8z"/></svg></span><span class="social-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 8.5h3.5V21H3.2zM5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm4.3 5.5h3.4v1.7c.5-1 1.7-2 3.5-2 3.7 0 4.4 2.4 4.4 5.5V21h-3.5v-6.5c0-1.5 0-3.4-2.1-3.4s-2.4 1.7-2.4 3.3V21H9.3z"/></svg></span><span class="social-youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 7.3a2.8 2.8 0 0 0-2-2C18 4.8 12 4.8 12 4.8s-6 0-7.7.5a2.8 2.8 0 0 0-2 2C1.8 9 1.8 12 1.8 12s0 3 .5 4.7a2.8 2.8 0 0 0 2 2c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.7.5-4.7s0-3-.5-4.7zM10 15.4V8.6l6 3.4z"/></svg></span></div><div class="langs"><a class="active" href="#" data-lang="kz">KZ</a><a href="#" data-lang="tr">TR</a><a href="#" data-lang="en">EN</a><a href="#" data-lang="ru">RU</a></div></div></div>
       <div class="container identity">
         <a class="brand" href="#top" aria-label="Ахмет Ясауи университеті"><img class="brand-logo" src="assets/ayu-logo.png" alt="Ахмет Ясауи университеті" /></a>
         <p class="motto" data-i18n="motto">"Ілім — жүрек жарығы, ақылға шырақ"<br><small>Ахмет Ясауи</small></p>
