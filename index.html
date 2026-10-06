@@ -79,6 +79,99 @@
       .footer-title { color:#fff; font-size:13px; font-weight:800; }
       @media (max-width: 900px) { .utility-nav{display:none}.identity{gap:15px}.motto{display:none}.search{width:180px}.menu a{padding:0 9px;font-size:10px}.hero-copy{padding-left:25px}.faculty-grid{grid-template-columns:repeat(2,1fr)} }
       @media (max-width: 650px) { .container{width:min(100% - 28px,1170px)}.utility{height:32px}.identity{min-height:78px}.brand{min-width:0}.brand-logo{height:58px}.brand-text{font-size:9px}.quick .search,.quick .btn:not(.enroll){display:none}.quick .enroll{font-size:10px;padding:0 9px;min-height:35px}.menu-inner{min-height:48px}.menu a{display:none}.menu a:first-child{display:flex}.hamburger{display:block;margin-left:auto;background:none;border:0;color:#fff;font-size:23px;cursor:pointer}.menu.open .menu-inner{display:block;padding:8px 0}.menu.open a{display:flex;min-height:40px}.menu.open .hamburger{position:absolute;right:20px;top:110px}.hero,.hero-content{min-height:390px}.hero{background-position:62% center}.hero-copy{padding:20px 16px 0;align-self:center}.scribble{margin-left:25px}.eyebrow{margin-top:46px;font-size:10px}.hero h1{font-size:29px;max-width:340px}.slide-nav{right:15px}.benefits{margin:0;width:100%;grid-template-columns:1fr;padding:22px 24px;gap:18px;box-shadow:none}.faculties{padding-top:35px}.faculty-grid,.news-grid{grid-template-columns:1fr}.faculty{min-height:58px}.news{padding:40px 0}.footer-row{display:block}.footer-row>div+div{margin-top:25px} }
+      .news, .story, .news-grid { all: unset; }
+      .news { display:block; background:#f2f7f8; padding:0 0 78px; }
+      .section-title { text-align:center; font-size:30px; line-height:1.25; margin:0; }
+      .section-title:after { content:""; display:block; width:58px; height:9px; border-top:3px solid var(--teal); border-radius:50%; margin:13px auto 30px; transform:rotate(-5deg); }
+      .news-ribbon { background:linear-gradient(90deg,#3b9fae,#75bec7,#258ca4); color:white; text-align:center; min-height:45px; display:flex; align-items:center; justify-content:center; gap:16px; font:700 italic 16px Georgia,serif; letter-spacing:1px; box-shadow:0 4px 10px rgba(0,92,113,.18); }
+      .news-ribbon span:first-child { font:700 25px Manrope,sans-serif; }
+      .news-wrap { padding-top:58px; }
+      .news-layout { display:grid; grid-template-columns:minmax(0,1fr) 285px; gap:34px; align-items:start; max-width:970px; margin:auto; }
+      .news-main { min-width:0; }
+      .news-tools { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; }
+      .filter-group { display:flex; gap:7px; flex-wrap:wrap; }
+      .filter-btn { border:0; background:#fff; color:#5b6870; cursor:pointer; min-height:35px; padding:0 12px; font-size:11px; font-weight:800; }
+      .filter-btn[aria-pressed="true"] { background:#e73564; color:#fff; }
+      .announcement-link { display:inline-flex; align-items:center; justify-content:center; background:#e7aa25; color:#fff; font-size:11px; font-weight:800; min-height:35px; padding:0 17px; white-space:nowrap; }
+      .news-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px; }
+      .news-card { display:block; background:#fff; box-shadow:0 7px 24px rgba(41,78,88,.08); transition:transform .2s,box-shadow .2s; }
+      .news-card:hover { transform:translateY(-4px); box-shadow:0 12px 26px rgba(41,78,88,.16); }
+      .news-card[hidden] { display:none; }
+      .news-card img { width:100%; aspect-ratio:1.75; object-fit:cover; display:block; }
+      .news-card-copy { padding:14px 15px 19px; min-height:112px; }
+      .news-card time,.news-card .tag { display:block; color:#ef4570; font-size:10px; font-weight:800; margin-bottom:6px; }
+      .news-card .tag { color:#dca41b; }
+      .news-card h3 { color:#25303b; font-size:13px; line-height:1.38; margin:0; }
+      .news-card .views { color:#d9a314; font-size:11px; margin-top:8px; }
+      .news-more { display:inline-block; margin:23px 0 0; color:#e53663; font-size:12px; font-weight:800; }
+      .notice-panel { background:#fff; border:1px solid #e6eaec; padding:19px 17px 8px; box-shadow:0 7px 24px rgba(41,78,88,.06); }
+      .notice-panel h3 { margin:0 0 12px; font-size:17px; }
+      .notice-item { display:flex; gap:10px; padding:10px 0; border-top:1px solid #edf1f2; }
+      .notice-symbol { flex:none; width:35px; height:35px; display:grid; place-items:center; background:#e6f8fa; color:#078fa6; font-size:17px; font-weight:800; }
+      .notice-item:nth-of-type(even) .notice-symbol { color:white; background:#079bb0; }
+      .notice-item strong { display:block; font-size:11px; line-height:1.35; }
+      .notice-item time { display:block; color:#98a3a9; font-size:10px; margin-top:4px; }
+      .notice-all { display:block; border-top:1px solid #edf1f2; color:#e3a928; padding:13px 0 5px; font-size:12px; font-weight:800; }
+      .media-section { background:linear-gradient(115deg,#3ca6b1,#207ea8); padding:48px 0 55px; color:#fff; }
+      .media-layout { max-width:970px; margin:auto; display:grid; grid-template-columns:minmax(0,2fr) minmax(230px,1fr); gap:30px; }
+      .media-intro { background:#fff; color:#263541; padding:17px 20px; min-height:105px; display:flex; justify-content:space-between; align-items:center; gap:15px; }
+      .media-intro h2 { font-size:21px; margin:0 0 6px; }
+      .media-intro p { font-size:12px; line-height:1.4; margin:0 0 5px; }
+      .media-intro a { color:#dc2e60; font-size:11px; font-weight:800; }
+      .media-intro-mark { font-size:35px; color:#d5192d; line-height:1; }
+      .video-thumbs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; margin-top:16px; }
+      .video-thumb { display:block; position:relative; overflow:hidden; background:#17384c; }
+      .video-thumb img { width:100%; aspect-ratio:1.6; object-fit:cover; display:block; transition:transform .25s; }
+      .video-thumb:hover img { transform:scale(1.05); }
+      .play-small { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:35px; height:35px; border-radius:50%; display:grid; place-items:center; background:#e8345d; color:white; font-size:13px; padding-left:2px; }
+      .media-bottom { display:flex; justify-content:space-between; gap:15px; font-size:12px; margin-top:15px; }
+      .gazette-card { background:#fff; color:#253541; padding:18px; min-height:296px; text-align:center; }
+      .gazette-card h3 { font-size:16px; line-height:1.35; margin:0 0 12px; }
+      .gazette-card img { display:block; width:100%; max-width:150px; height:170px; object-fit:cover; object-position:top; margin:0 auto 13px; box-shadow:0 4px 10px rgba(0,0,0,.14); }
+      .gazette-card a { display:inline-block; color:white; background:#dc2e60; padding:9px 13px; font-size:11px; font-weight:800; }
+      .gazette-more { color:white; display:block; margin-top:15px; font-size:12px; text-align:center; }
+      .about-section { padding:90px 0 45px; overflow:hidden; }
+      .about-layout { max-width:970px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
+      .about-copy { position:relative; }
+      .about-copy:before { content:""; position:absolute; width:100px; height:100px; border-radius:50%; left:-40px; top:-50px; background-image:radial-gradient(#17c1bd 1px,transparent 1.7px); background-size:7px 7px; opacity:.5; z-index:-1; }
+      .about-copy h2 { font-size:27px; margin:0; }
+      .about-copy .accent { margin:10px 0 20px; }
+      .about-copy p { font-size:14px; line-height:1.9; color:#66737c; margin:0 0 15px; }
+      .about-link { font-size:12px; color:#e53663; font-weight:800; }
+      .about-photo { position:relative; margin:auto; width:min(100%,340px); }
+      .about-photo:before { content:""; position:absolute; inset:-22px -23px 18px 20px; border-radius:35% 24% 35% 25%; background:#fcebef; transform:rotate(8deg); }
+      .about-photo img { position:relative; display:block; width:100%; aspect-ratio:1; object-fit:cover; border-radius:4px; }
+      .stats { max-width:970px; margin:0 auto; padding:35px 0 65px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+      .stat { background:#fff; text-align:center; padding:17px 8px; box-shadow:0 7px 22px rgba(23,48,59,.11); }
+      .stat strong { display:block; font-size:27px; line-height:1.2; font-weight:500; color:#39a5b6; }
+      .stat:nth-child(2) strong { color:#e7aab5; }.stat:nth-child(3) strong { color:#a89ad5; }.stat:nth-child(4) strong { color:#e6b747; }
+      .stat span { color:#8a929a; font-size:11px; }
+      .request-section { background:#f3f8f9; padding:42px 20px 55px; text-align:center; }
+      .request-section h2 { font-size:24px; max-width:560px; margin:auto; }
+      .request-section a { display:inline-block; margin-top:20px; background:#ec3b68; color:white; font-size:12px; font-weight:800; padding:12px 20px; }
+      .promo-video { min-height:420px; position:relative; background:#162634 url('assets/video.jpg') center/cover no-repeat; color:white; display:grid; place-items:center; text-align:center; }
+      .promo-video:before { content:""; position:absolute; inset:0; background:rgba(6,17,24,.5); }
+      .promo-video-content { position:relative; max-width:600px; padding:35px; }
+      .promo-play { width:74px; height:74px; border-radius:50%; background:#ec3b68; display:grid; place-items:center; color:#fff; font-size:26px; padding-left:4px; margin:0 auto 22px; }
+      .promo-video h2 { font-size:27px; line-height:1.35; }
+      .contact-strip { max-width:670px; margin:-1px auto 0; transform:translateY(32px); background:#f4bd24; min-height:84px; display:flex; align-items:center; justify-content:center; gap:23px; padding:14px 26px; position:relative; z-index:2; }
+      .contact-strip a { display:block; font-size:18px; font-weight:800; }
+      .contact-strip small { font-size:11px; }
+      .contact-strip .or { border-radius:50%; background:white; width:40px; height:40px; display:grid; place-items:center; flex:none; font-size:11px; font-weight:800; }
+      .partners { padding:75px 0 50px; }
+      .partner-row { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:25px; max-width:950px; margin:auto; }
+      .partner-row img { max-width:130px; height:50px; width:auto; object-fit:contain; }
+      footer { background:#101313; color:#aeb8ba; padding:62px 0 20px; }
+      .footer-row { display:grid; grid-template-columns:1.3fr 1fr 1fr 1.2fr; gap:45px; }
+      .footer-row h3 { color:white; font-size:14px; margin:0 0 16px; }
+      .footer-row p { font-size:12px; line-height:1.8; }
+      .footer-links { display:grid; gap:8px; }
+      .footer-links a { font-size:12px; color:#aeb8ba; }
+      .footer-links a:hover { color:#fff; }
+      .footer-map { height:150px; border:0; width:100%; background:#e5ebed; }
+      .footer-bottom { border-top:1px solid #303637; text-align:center; margin-top:45px; padding-top:18px; color:#6d8d93; font-size:11px; }
+      @media(max-width:900px){ .news-layout{grid-template-columns:1fr}.notice-panel{max-width:none}.media-layout{grid-template-columns:1fr}.about-layout{gap:35px}.footer-row{grid-template-columns:repeat(2,1fr)} }
+      @media(max-width:650px){ .news-ribbon{font-size:12px;gap:8px;padding:8px 14px}.news-wrap{padding-top:40px}.section-title{font-size:24px}.news-cards{grid-template-columns:1fr}.news-tools{align-items:flex-start;flex-direction:column}.announcement-link{width:100%}.media-section{padding:35px 0}.media-intro h2{font-size:18px}.video-thumbs{grid-template-columns:1fr}.gazette-card{min-height:0}.about-section{padding:60px 0 25px}.about-layout{grid-template-columns:1fr;gap:40px}.about-photo{max-width:270px}.stats{grid-template-columns:repeat(2,1fr);padding:30px 0 50px}.promo-video{min-height:350px}.promo-video h2{font-size:21px}.contact-strip{flex-wrap:wrap;gap:8px;text-align:center}.contact-strip a{font-size:15px}.partners{padding:70px 0 35px}.partner-row{justify-content:center;gap:20px}.partner-row img{max-width:95px;height:42px}.footer-row{grid-template-columns:1fr;gap:25px}.footer-bottom{margin-top:30px} }
     </style>
   </head>
   <body>
@@ -95,9 +188,34 @@
       <section class="hero" aria-label="Университетке қош келдіңіз"><div class="container hero-content"><div class="hero-copy"><div class="scribble">〰</div><p class="eyebrow" data-i18n="welcome">АХМЕТ ЯСАУИ УНИВЕРСИТЕТІНЕ ҚОШ КЕЛДІҢІЗ!</p><h1 data-i18n="heroTitle">Түркі Әлемінің<br />Жарқыраған Жұлдызы</h1></div></div><div class="slide-nav"><button class="round" id="next" aria-label="Келесі слайд">→</button><button class="round" id="previous" aria-label="Алдыңғы слайд">←</button></div></section>
       <section class="benefits" aria-label="Университет артықшылықтары"><article class="benefit"><span class="benefit-icon">⌁</span><div><strong data-i18n="benefitOne">Шәкіртақы алу мүмкіндігі</strong><p data-i18n="benefitOneText">Біздің университет өз студенттеріне түрлі ұйымдардан шәкіртақы ұсынады.</p></div></article><article class="benefit"><span class="benefit-icon">✥</span><div><strong data-i18n="benefitTwo">Бағдарламалар</strong><p data-i18n="benefitTwoText">Көптеген ғылыми салаларда мол еңбектерін жариялаған таңдаулы оқытушылар.</p></div></article><article class="benefit"><span class="benefit-icon">▥</span><div><strong data-i18n="library">Кітапхана</strong><p data-i18n="benefitThreeText">Іріктеулі кітаптарды қамтитын университет кітапханасы.</p></div></article></section>
       <section class="faculties container" id="faculties"><h2 data-i18n="faculties">Факультеттер</h2><div class="accent"></div><div class="faculty-grid"><a href="#" class="faculty f1"><span>⌁</span><b data-i18n="facultyOne">Стоматология факультеті</b></a><a href="#" class="faculty f2"><span>⚛</span><b data-i18n="facultyTwo">Жаратылыстану ғылымдары факультеті</b></a><a href="#" class="faculty f3"><span>▱</span><b data-i18n="facultyThree">Филология факультеті</b></a><a href="#" class="faculty f4"><span>◢</span><b data-i18n="facultyFour">Дайындық орталығы</b></a><a href="#" class="faculty f5"><span>♟</span><b data-i18n="facultyFive">Экономика, басқару және құқық факультеті</b></a><a href="#" class="faculty f6"><span>≋</span><b data-i18n="facultySix">Теология факультеті</b></a><a href="#" class="faculty f7"><span>◒</span><b data-i18n="facultySeven">Әлеуметтік-гуманитарлық ғылымдар факультеті</b></a><a href="#" class="faculty f8"><span>▰</span><b data-i18n="facultyEight">Жоғары медициналық білімнен кейінгі білім беру</b></a><a href="#" class="faculty f9"><span>⚙</span><b data-i18n="facultyNine">Инженерия факультеті</b></a></div></section>
-      <section class="news" id="news"><div class="container"><div class="news-header"><div><h2 data-i18n="news">Университет жаңалықтары</h2><div class="accent" style="margin-left:0"></div></div><a class="more" href="#" data-i18n="allNews">Барлық жаңалықтар →</a></div><div class="news-grid"><article class="story"><time data-i18n="dateOne">24 ҚЫРКҮЙЕК 2026</time><h3 data-i18n="newsOne">Жаңа оқу жылы: мүмкіндіктер мен жаңашыл бастамалар</h3></article><article class="story"><time data-i18n="dateTwo">22 ҚЫРКҮЙЕК 2026</time><h3 data-i18n="newsTwo">Зерттеу жобаларына өтінім қабылдау басталды</h3></article><article class="story"><time data-i18n="dateThree">19 ҚЫРКҮЙЕК 2026</time><h3 data-i18n="newsThree">Студенттерге арналған мәдениет апталығы</h3></article></div></div></section>
+      <section class="news" id="news">
+        <div class="news-ribbon"><span aria-hidden="true">⌂</span><span data-i18n="ribbon">ТЕРЕҢ ТАРИХТАН ЖАРҚЫН БОЛАШАҚҚА!</span></div>
+        <div class="container news-wrap">
+          <h2 class="section-title" data-i18n="news">Жаңалықтар &amp; Хабарландырулар</h2>
+          <div class="news-layout">
+            <div class="news-main">
+              <div class="news-tools"><div class="filter-group" role="group" aria-label="Жаңалықтар сүзгісі"><button class="filter-btn" type="button" data-filter="all" aria-pressed="true" data-i18n="filterAll">Барлығы</button><button class="filter-btn" type="button" data-filter="campus" aria-pressed="false" data-i18n="filterCampus">Кампус</button><button class="filter-btn" type="button" data-filter="science" aria-pressed="false" data-i18n="science">Ғылым</button></div><a class="announcement-link" href="https://ayu.edu.kz/kz/tum_duyurular/" data-i18n="announcements">Хабарландырулар</a></div>
+              <div class="news-cards">
+                <a class="news-card" data-category="science" href="https://ayu.edu.kz/kz/haberler/2103"><img src="assets/news-museum.jpg" alt="Университет музейіндегі экспозиция" loading="lazy" /><div class="news-card-copy"><span class="tag" data-i18n="science">Ғылым</span><time datetime="2026-10-05">05.10.2026</time><h3 data-i18n="newsOne">Университет музейіндегі динозавр қаңқасы палеонтологтардың назарына ілікті</h3><div class="views">★★★★★</div></div></a>
+                <a class="news-card" data-category="campus" href="https://ayu.edu.kz/kz/haberler/2104"><img src="assets/news-award.jpg" alt="Университет оқытушысын марапаттау" loading="lazy" /><div class="news-card-copy"><span class="tag" data-i18n="filterCampus">Кампус</span><time datetime="2026-10-05">05.10.2026</time><h3 data-i18n="newsTwo">«Ерен еңбегі үшін»: оқытушымыз Президент қолынан марапат алды</h3><div class="views">★★★★★</div></div></a>
+                <a class="news-card" data-category="campus" href="https://ayu.edu.kz/kz/haberler/2105"><img src="assets/news-library.jpg" alt="Университет кітапханасындағы кездесу" loading="lazy" /><div class="news-card-copy"><span class="tag" data-i18n="filterCampus">Кампус</span><time datetime="2026-10-05">05.10.2026</time><h3 data-i18n="newsThree">Өкілетті кеңес төрағасы университет кітапханасын аралады</h3><div class="views">★★★★★</div></div></a>
+                <a class="news-card" data-category="campus" href="https://ayu.edu.kz/kz/haberler/2107"><img src="assets/news-sport.jpg" alt="Студенттер арасындағы спорттық жарыс" loading="lazy" /><div class="news-card-copy"><span class="tag" data-i18n="filterCampus">Кампус</span><time datetime="2026-10-05">05.10.2026</time><h3 data-i18n="newsFour">Студенттер арасындағы дәстүрлі спартакиада басталды</h3><div class="views">★★★★★</div></div></a>
+              </div>
+              <a class="news-more" href="https://ayu.edu.kz/kz/tum_haberler/" data-i18n="allNews">Барлық жаңалықтар →</a>
+            </div>
+            <aside class="notice-panel" aria-label="Хабарландырулар"><h3 data-i18n="announcements">Хабарландырулар</h3><a class="notice-item" href="https://ayu.edu.kz/kz/duyurular/1072"><span class="notice-symbol">⌂</span><span><strong data-i18n="noticeOne">Халықаралық симпозиум</strong><time>11.09.2026</time></span></a><a class="notice-item" href="https://ayu.edu.kz/kz/duyurular/1109"><span class="notice-symbol">▤</span><span><strong data-i18n="noticeTwo">Ғылыми жобалар аясындағы сатып алу хабарландыруы</strong><time>06.10.2026</time></span></a><a class="notice-item" href="https://ayu.edu.kz/kz/duyurular/1100"><span class="notice-symbol">⌂</span><span><strong data-i18n="noticeThree">Өнер, медиа және дизайн кафедрасы конкурс жариялайды</strong><time>01.10.2026</time></span></a><a class="notice-item" href="https://ayu.edu.kz/kz/duyurular/1098"><span class="notice-symbol">▤</span><span><strong data-i18n="noticeFour">Ғылыми жобалар бойынша хабарландыру</strong><time>30.09.2026</time></span></a><a class="notice-all" href="https://ayu.edu.kz/kz/tum_duyurular/" data-i18n="allAnnouncements">Барлық хабарландырулар →</a></aside>
+          </div>
+        </div>
+      </section>
+      <section class="media-section" id="media"><div class="container media-layout"><div><div class="media-intro"><div><h2>YASAWI MEDIA</h2><p data-i18n="mediaText">Университет тынысы: подкаст пен бейнематериалдар</p><a href="https://www.youtube.com/@yasawitv1796" data-i18n="visit">Өту →</a></div><div class="media-intro-mark" aria-hidden="true">▶</div></div><div class="video-thumbs"><a class="video-thumb" href="https://www.youtube.com/watch?v=kYAJ5vEhqSM" aria-label="YASAWI MEDIA — бірінші бейне"><img src="assets/media-one.jpg" alt="YASAWI MEDIA бейнематериалы" loading="lazy" /><span class="play-small">▶</span></a><a class="video-thumb" href="https://www.youtube.com/watch?v=qGpNmqsLJN4" aria-label="YASAWI MEDIA — екінші бейне"><img src="assets/media-two.jpg" alt="YASAWI MEDIA студенттер туралы бейне" loading="lazy" /><span class="play-small">▶</span></a></div><div class="media-bottom"><a href="https://www.youtube.com/@yasawitv1796" data-i18n="moreVideos">Толығырақ қарау →</a><a href="https://students.ayu.edu.kz/" data-i18n="academicDept">Академиялық департамент →</a></div></div><div><div class="gazette-card"><h3 data-i18n="newspaper">«Ясауи университеті» газеті</h3><img src="assets/newspaper.png" alt="Ясауи университеті газетінің мұқабасы" loading="lazy" /><a href="https://ayu.edu.kz/kz/4268/gazete-arsivi" data-i18n="readNewspaper">Газетті оқу</a></div><a class="gazette-more" href="https://ayu.edu.kz/kz/4268/gazete-arsivi" data-i18n="moreNewspaper">Толығырақ қарау →</a></div></div></section>
+      <section class="about-section container" id="about"><div class="about-layout"><div class="about-copy"><h2 data-i18n="aboutTitle">Біз туралы</h2><div class="accent"></div><p data-i18n="aboutText">1991 жылы құрылған Қожа Ахмет Ясауи атындағы Халықаралық қазақ-түрік университеті — Қазақстандағы алғашқы халықаралық жоғары оқу орындарының бірі. Университет түркі әлемінің жастарын біріктіріп, білім мен ғылымды дамытуға үлес қосады.</p><a class="about-link" href="https://ayu.edu.kz/kz/" data-i18n="aboutMore">Терең тарихтан жарқын болашаққа →</a></div><div class="about-photo"><img src="assets/about.jpg" alt="Ясауи университетінің студенті" loading="lazy" /></div></div></section>
+      <section class="stats container" aria-label="Университет сандары"><div class="stat"><strong>169</strong><span data-i18n="statPrograms">Білім беру бағдарламасы</span></div><div class="stat"><strong>10 157</strong><span data-i18n="statStudents">Білімгер</span></div><div class="stat"><strong>95,5%</strong><span data-i18n="statEmployment">Жұмыспен қамтылған</span></div><div class="stat"><strong>957</strong><span data-i18n="statFaculty">Оқытушы-профессорлар</span></div></section>
+      <section class="request-section"><h2 data-i18n="requestTitle">Құжаттар, шағым, сұраныстар туралы өтініштер</h2><a href="https://students.ayu.edu.kz/" data-i18n="requestLink">Академиялық департамент →</a></section>
+      <section class="promo-video"><div class="promo-video-content"><a class="promo-play" href="https://www.youtube.com/watch?v=YTtY95JVFBc" aria-label="Университет туралы бейнені көру">▶</a><h2 data-i18n="promoTitle">Ахмет Ясауи университеті туралы жарнамалық бейнеролик</h2></div></section>
+      <div class="contact-strip"><div><small data-i18n="writeUs">Бізге жазыңыз</small><a href="mailto:info@ayu.edu.kz">info@ayu.edu.kz</a></div><span class="or" data-i18n="or">немесе</span><div><small data-i18n="callUs">Бізбен байланысыңыз</small><a href="tel:+77253363636">+7 (725) 336 36 36</a></div></div>
+      <section class="partners container" aria-label="Серіктестер"><div class="partner-row"><a href="https://ayu.edu.kz/kz/"><img src="assets/ayu-logo.png" alt="Ахмет Ясауи университеті" loading="lazy" /></a><a href="https://bilig.yesevi.edu.tr/"><img src="assets/partner-bilig.png" alt="Bilig" loading="lazy" /></a><a href="https://erj.eurasian-research.org/"><img src="assets/partner-erj.png" alt="Eurasian Research Journal" loading="lazy" /></a><a href="https://avesis.ayu.edu.kz/"><img src="assets/partner-avesis.png" alt="AVESIS" loading="lazy" /></a><a href="https://turtep.edu.tr/"><img src="assets/partner-turtep.png" alt="TURTEP" loading="lazy" /></a></div></section>
     </main>
-    <footer id="footer"><div class="container footer-row"><div><a class="brand" href="#top"><img class="brand-logo" src="assets/ayu-logo.png" alt="Ахмет Ясауи университеті" /></a><p data-i18n="footerText">Білім, ғылым және рухани құндылықтарды бір арнаға тоғыстырған университет.</p></div><div><div class="footer-title" data-i18n="contact">Байланыс</div><p data-i18n="address">Түркістан қаласы, Б. Саттарханов даңғылы<br />+7 (725) 336 36 36<br />info@ayu.edu.kz</p></div></div></footer>
+    <footer id="footer"><div class="container footer-row"><div><a class="brand" href="#top"><img class="brand-logo" src="assets/ayu-logo.png" alt="Ахмет Ясауи университеті" /></a><p data-i18n="footerText">Түркі әлемінің жарқын жұлдызы</p><p data-i18n="address">Түркістан қаласы, Б. Саттарханов даңғылы, 29<br />+7 (725) 336 36 36<br />info@ayu.edu.kz</p></div><div><h3 data-i18n="footerLinks">Жылдам сілтемелер</h3><nav class="footer-links"><a href="#about" data-i18n="university">Университетіміз</a><a href="#faculties" data-i18n="faculties">Факультеттер</a><a href="#news" data-i18n="newsShort">Жаңалықтар</a><a href="#media">YASAWI MEDIA</a><a href="https://platonus.ayu.edu.kz/">PLATONUS</a></nav></div><div><h3 data-i18n="faculties">Факультеттер</h3><nav class="footer-links"><a href="#faculties" data-i18n="facultyOne">Стоматология факультеті</a><a href="#faculties" data-i18n="facultyTwo">Жаратылыстану ғылымдары факультеті</a><a href="#faculties" data-i18n="facultyThree">Филология факультеті</a><a href="#faculties" data-i18n="facultyNine">Инженерия факультеті</a></nav></div><div><h3 data-i18n="location">Орналасуы</h3><iframe class="footer-map" title="Ясауи университетінің орналасуы" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Ahmet%20Yasawi%20University%20Turkistan&amp;output=embed"></iframe></div></div><div class="container footer-bottom">© 2026 Ахмет Ясауи университеті</div></footer>
     <script>
       const translations = {
         kz: {
@@ -137,6 +255,38 @@
           news:'Новости университета', allNews:'Все новости →', dateOne:'24 СЕНТЯБРЯ 2026', dateTwo:'22 СЕНТЯБРЯ 2026', dateThree:'19 СЕНТЯБРЯ 2026', newsOne:'Новый учебный год: возможности и новые инициативы', newsTwo:'Открыт приём заявок на исследовательские проекты', newsThree:'Неделя культуры для студентов', footerText:'Университет, объединяющий образование, науку и духовные ценности.', address:'г. Туркестан, проспект Б. Саттарханова<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
         }
       };
+      Object.assign(translations.kz, {
+        ribbon:'ТЕРЕҢ ТАРИХТАН ЖАРҚЫН БОЛАШАҚҚА!', news:'Жаңалықтар &amp; Хабарландырулар', newsShort:'Жаңалықтар', filterAll:'Барлығы', filterCampus:'Кампус', announcements:'Хабарландырулар',
+        newsOne:'Университет музейіндегі динозавр қаңқасы палеонтологтардың назарына ілікті', newsTwo:'«Ерен еңбегі үшін»: оқытушымыз Президент қолынан марапат алды', newsThree:'Өкілетті кеңес төрағасы университет кітапханасын аралады', newsFour:'Студенттер арасындағы дәстүрлі спартакиада басталды', allNews:'Барлық жаңалықтар →',
+        noticeOne:'Халықаралық симпозиум', noticeTwo:'Ғылыми жобалар аясындағы сатып алу хабарландыруы', noticeThree:'Өнер, медиа және дизайн кафедрасы конкурс жариялайды', noticeFour:'Ғылыми жобалар бойынша хабарландыру', allAnnouncements:'Барлық хабарландырулар →',
+        mediaText:'Университет тынысы: подкаст пен бейнематериалдар', visit:'Өту →', moreVideos:'Толығырақ қарау →', academicDept:'Академиялық департамент →', newspaper:'«Ясауи университеті» газеті', readNewspaper:'Газетті оқу', moreNewspaper:'Толығырақ қарау →',
+        aboutTitle:'Біз туралы', aboutText:'1991 жылы құрылған Қожа Ахмет Ясауи атындағы Халықаралық қазақ-түрік университеті — Қазақстандағы алғашқы халықаралық жоғары оқу орындарының бірі. Университет түркі әлемінің жастарын біріктіріп, білім мен ғылымды дамытуға үлес қосады.', aboutMore:'Терең тарихтан жарқын болашаққа →',
+        statPrograms:'Білім беру бағдарламасы', statStudents:'Білімгер', statEmployment:'Жұмыспен қамтылған', statFaculty:'Оқытушы-профессорлар', requestTitle:'Құжаттар, шағым, сұраныстар туралы өтініштер', requestLink:'Академиялық департамент →', promoTitle:'Ахмет Ясауи университеті туралы жарнамалық бейнеролик', writeUs:'Бізге жазыңыз', or:'немесе', callUs:'Бізбен байланысыңыз', footerLinks:'Жылдам сілтемелер', location:'Орналасуы', footerText:'Түркі әлемінің жарқын жұлдызы', address:'Түркістан қаласы, Б. Саттарханов даңғылы, 29<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
+      });
+      Object.assign(translations.tr, {
+        ribbon:'KÖKLÜ TARİHTEN AYDINLIK GELECEĞE!', news:'Haberler ve Duyurular', newsShort:'Haberler', filterAll:'Tümü', filterCampus:'Kampüs', announcements:'Duyurular',
+        newsOne:'Üniversite müzesindeki dinozor iskeleti paleontologların ilgisini çekti', newsTwo:'Öğretim üyemiz Cumhurbaşkanı tarafından ödüllendirildi', newsThree:'Mütevelli Heyeti Başkanı üniversite kütüphanesini ziyaret etti', newsFour:'Öğrenciler arası geleneksel spor yarışmaları başladı', allNews:'Tüm haberler →',
+        noticeOne:'Uluslararası sempozyum', noticeTwo:'Bilimsel projeler kapsamında satın alma duyurusu', noticeThree:'Sanat, medya ve tasarım bölümü yarışma ilanı', noticeFour:'Bilimsel projeler hakkında duyuru', allAnnouncements:'Tüm duyurular →',
+        mediaText:'Üniversiteden podcast ve videolar', visit:'Ziyaret et →', moreVideos:'Daha fazlası →', academicDept:'Akademik bölüm →', newspaper:'Yesevi Üniversitesi gazetesi', readNewspaper:'Gazeteyi oku', moreNewspaper:'Daha fazlası →',
+        aboutTitle:'Hakkımızda', aboutText:'1991 yılında kurulan Hoca Ahmet Yesevi Uluslararası Türk-Kazak Üniversitesi, Kazakistan’ın ilk uluslararası yükseköğretim kurumlarından biridir. Üniversite, Türk dünyasının gençlerini bir araya getirerek eğitim ve bilimin gelişimine katkı sağlar.', aboutMore:'Köklü tarihten aydınlık geleceğe →',
+        statPrograms:'Eğitim programı', statStudents:'Öğrenci', statEmployment:'İstihdam oranı', statFaculty:'Öğretim üyesi', requestTitle:'Belgeler, şikâyetler ve talepler için başvurular', requestLink:'Akademik bölüm →', promoTitle:'Ahmet Yesevi Üniversitesi tanıtım filmi', writeUs:'Bize yazın', or:'veya', callUs:'Bizi arayın', footerLinks:'Hızlı bağlantılar', location:'Konum', footerText:'Türk dünyasının parlayan yıldızı', address:'Türkistan, B. Sattarkhanov Caddesi 29<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
+      });
+      Object.assign(translations.en, {
+        ribbon:'FROM A RICH HISTORY TO A BRIGHT FUTURE!', news:'News &amp; Announcements', newsShort:'News', filterAll:'All', filterCampus:'Campus', announcements:'Announcements',
+        newsOne:'Dinosaur skeleton in the university museum draws paleontologists’ attention', newsTwo:'Our lecturer receives an award from the President', newsThree:'Board chair visits the university library', newsFour:'Traditional interfaculty student games begin', allNews:'All news →',
+        noticeOne:'International symposium', noticeTwo:'Procurement notice for research projects', noticeThree:'Art, media and design department announces a competition', noticeFour:'Research project announcement', allAnnouncements:'All announcements →',
+        mediaText:'Podcasts and videos from university life', visit:'Visit →', moreVideos:'Watch more →', academicDept:'Academic department →', newspaper:'Yassawi University newspaper', readNewspaper:'Read newspaper', moreNewspaper:'Learn more →',
+        aboutTitle:'About us', aboutText:'Founded in 1991, Khoja Akhmet Yassawi International Kazakh-Turkish University is one of Kazakhstan’s first international universities. It brings young people from the Turkic world together and advances education and research.', aboutMore:'From a rich history to a bright future →',
+        statPrograms:'Education programmes', statStudents:'Students', statEmployment:'Employment rate', statFaculty:'Faculty members', requestTitle:'Requests for documents, complaints and enquiries', requestLink:'Academic department →', promoTitle:'Discover Ahmet Yassawi University', writeUs:'Email us', or:'or', callUs:'Call us', footerLinks:'Quick links', location:'Location', footerText:'The shining star of the Turkic world', address:'29 B. Sattarkhanov Avenue, Turkistan<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
+      });
+      Object.assign(translations.ru, {
+        ribbon:'ОТ БОГАТОЙ ИСТОРИИ К СВЕТЛОМУ БУДУЩЕМУ!', news:'Новости и объявления', newsShort:'Новости', filterAll:'Все', filterCampus:'Кампус', announcements:'Объявления',
+        newsOne:'Скелет динозавра в музее университета привлёк внимание палеонтологов', newsTwo:'Наш преподаватель получил награду из рук Президента', newsThree:'Председатель попечительского совета посетил библиотеку университета', newsFour:'Началась традиционная спартакиада среди студентов', allNews:'Все новости →',
+        noticeOne:'Международный симпозиум', noticeTwo:'Объявление о закупках для научных проектов', noticeThree:'Кафедра искусства, медиа и дизайна объявляет конкурс', noticeFour:'Объявление по научным проектам', allAnnouncements:'Все объявления →',
+        mediaText:'Жизнь университета: подкасты и видео', visit:'Перейти →', moreVideos:'Смотреть ещё →', academicDept:'Академический департамент →', newspaper:'Газета «Университет Ясауи»', readNewspaper:'Читать газету', moreNewspaper:'Подробнее →',
+        aboutTitle:'О нас', aboutText:'Международный казахско-турецкий университет имени Ходжи Ахмеда Ясауи, основанный в 1991 году, — один из первых международных вузов Казахстана. Университет объединяет молодёжь тюркского мира и развивает образование и науку.', aboutMore:'От богатой истории к светлому будущему →',
+        statPrograms:'Образовательные программы', statStudents:'Студенты', statEmployment:'Трудоустройство', statFaculty:'Преподаватели', requestTitle:'Заявления на документы, жалобы и запросы', requestLink:'Академический департамент →', promoTitle:'Видео об Университете Ахмета Ясауи', writeUs:'Напишите нам', or:'или', callUs:'Позвоните нам', footerLinks:'Быстрые ссылки', location:'Местоположение', footerText:'Яркая звезда тюркского мира', address:'г. Туркестан, проспект Б. Саттарханова, 29<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
+      });
       const setLanguage = lang => {
         const copy = translations[lang] || translations.kz;
         document.documentElement.lang = lang;
@@ -147,6 +297,11 @@
       };
       document.querySelectorAll('[data-lang]').forEach(node => node.addEventListener('click', event => { event.preventDefault(); setLanguage(node.dataset.lang); }));
       setLanguage(localStorage.getItem('ayu-language') || 'kz');
+      document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+        const category = button.dataset.filter;
+        document.querySelectorAll('[data-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        document.querySelectorAll('.news-card').forEach(card => { card.hidden = category !== 'all' && card.dataset.category !== category; });
+      }));
       const menu = document.getElementById('main-menu'); const toggle = document.querySelector('.hamburger');
       toggle.addEventListener('click', () => { const open = menu.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); toggle.textContent = open ? '×' : '☰'; });
       document.querySelectorAll('[data-message]').forEach(btn => btn.addEventListener('click', () => alert(btn.dataset.message)));
