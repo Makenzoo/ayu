@@ -1,0 +1,7 @@
+{
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 80,
+  "editor.rulers": [80],
+  "editor.minimap.enabled": false,
+  "files.encoding": "utf8"
+}
