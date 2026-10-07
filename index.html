@@ -4,448 +4,880 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#078fa6" />
-    <meta name="description" content="Қожа Ахмет Ясауи атындағы Халықаралық қазақ-түрік университеті" />
+    <meta
+      name="description"
+      content="Қожа Ахмет Ясауи атындағы Халықаралық қазақ-түрік университеті"
+    />
     <title>Ясауи университеті</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23078fa6' d='M32 3 59 17v31L32 62 5 48V17z'/%3E%3Cpath fill='%23fff' d='M32 14c8 8 11 15 11 22 0 8-5 14-11 17-6-3-11-9-11-17 0-7 3-14 11-22Z'/%3E%3Cpath fill='%23e1ac21' d='M29 18h6v27h-6z'/%3E%3C/svg%3E" />
-    <style>
-      :root { --ink:#202934; --navy:#1c293d; --teal:#078fa6; --aqua:#19c5bd; --gold:#e8b521; --cloud:#f5f8f8; --red:#b80d2b; }
-      * { box-sizing:border-box; }
-      html { scroll-behavior:smooth; }
-      body { margin:0; color:var(--ink); font-family:Manrope, Arial, sans-serif; background:#fff; }
-      button,a { font:inherit; }
-      a { color:inherit; text-decoration:none; }
-      .container { width:min(1170px, calc(100% - 40px)); margin:auto; }
-      .utility { height:38px; background:var(--navy); color:#dae3ea; font-size:11px; }
-      .utility .container { display:flex; align-items:center; justify-content:space-between; height:100%; }
-      .utility-nav,.socials,.langs { display:flex; align-items:center; gap:18px; }
-      .utility-nav a:hover,.langs a:hover { color:#fff; }
-      .socials { gap:9px; font-weight:800; }
-      .langs { gap:9px; color:#aeb8c4; }
-      .langs .active { color:#db9d21; }
-      .identity { min-height:110px; display:flex; align-items:center; gap:28px; }
-      .brand { display:flex; align-items:center; min-width:140px; }
-      .brand-logo { display:block; width:auto; height:84px; object-fit:contain; }
-      .brand-text { font:800 11px/1.2 Georgia,serif; color:#526174; letter-spacing:.2px; }
-      .brand-text span { display:block; font-size:10px; }
-      .motto { color:#bd2035; font:700 13px/1.3 Georgia,serif; max-width:188px; }
-      .quick { margin-left:auto; display:flex; align-items:center; gap:10px; }
-      .search { width:245px; border:1px solid #e1e7eb; display:flex; align-items:center; height:41px; padding:0 13px; }
-      .search input { min-width:0; border:0; outline:0; width:100%; font-size:12px; }
-      .btn { border:0; cursor:pointer; min-height:41px; padding:0 17px; color:#fff; background:var(--red); font-size:11px; font-weight:800; border-radius:3px; white-space:nowrap; transition:transform .2s,filter .2s; }
-      .btn:hover { transform:translateY(-2px); filter:brightness(1.1); }
-      .menu { background:var(--teal); color:white; }
-      .menu-inner { min-height:58px; display:flex; align-items:stretch; }
-      .menu a { padding:0 17px; display:flex; align-items:center; font-size:11px; font-weight:800; border-left:1px solid rgba(0,0,0,.06); }
-      .menu a:hover { background:#087e92; }
-      .hamburger { display:none; }
-      .hero { min-height:466px; position:relative; overflow:hidden; background:#111 url('assets/ayu-hero-students.png') center/cover no-repeat; color:#fff; }
-      .hero:before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(5,10,13,.14) 0%,rgba(5,10,13,.09) 40%,rgba(5,10,13,.02) 75%); }
-      .hero:after { content:""; position:absolute; inset:-20% 54% auto -5%; height:110%; opacity:.27; background-image:radial-gradient(#39e0cf 1px,transparent 1.5px); background-size:9px 9px; transform:rotate(-8deg); }
-      .hero-content { position:relative; z-index:1; min-height:466px; display:flex; align-items:center; }
-      .hero-copy { padding-left:54px; max-width:530px; }
-      .scribble { color:var(--gold); font:700 58px/1 cursive; transform:rotate(-14deg); height:48px; margin-left:72px; }
-      .eyebrow { margin:63px 0 14px; color:#f1be27; font-size:12px; letter-spacing:1.3px; font-weight:800; }
-      h1 { margin:0; font-size:37px; max-width:480px; line-height:1.15; letter-spacing:-1px; }
-      .slide-nav { position:absolute; right:36px; top:50%; transform:translateY(-50%); z-index:2; display:grid; gap:8px; }
-      .round { width:38px; height:38px; border-radius:50%; background:white; border:0; cursor:pointer; color:#58636c; font-weight:800; font-size:20px; }
-      .benefits { position:relative; z-index:3; margin:-2px auto 0; width:min(950px, calc(100% - 40px)); padding:25px 29px; min-height:105px; display:grid; grid-template-columns:repeat(3,1fr); gap:27px; background:#fff; box-shadow:0 14px 30px rgba(20,41,53,.11); }
-      .benefit { display:flex; gap:14px; align-items:flex-start; }
-      .benefit-icon { flex:none; width:28px; height:28px; color:var(--aqua); font-size:27px; line-height:1; }
-      .benefit strong { display:block; font-size:14px; margin:1px 0 6px; }
-      .benefit p { margin:0; color:#8a959b; font-size:11px; line-height:1.55; }
-      .faculties { padding:32px 0 65px; text-align:center; }
-      h2 { font-size:24px; margin:0; }
-      .accent { width:54px; height:8px; border-top:3px solid var(--teal); border-radius:50%; margin:9px auto 28px; transform:rotate(-4deg); }
-      .faculty-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px 18px; max-width:950px; margin:auto; text-align:left; }
-      .faculty { min-height:64px; padding:12px 16px; display:flex; align-items:center; gap:15px; border-radius:2px; font-weight:800; font-size:12px; }
-      .faculty span { width:34px; color:#089bb2; font-size:25px; text-align:center; }
-      .f1 { background:#edf9f8; }.f2 { background:#fff2f3; }.f3 { background:#eefaf4; }.f4 { background:#fff9ed; }.f5 { background:#f5f0ff; }.f6 { background:#fff2f9; }.f7 { background:#eff1ff; }.f8 { background:#edf9ff; }.f9 { background:#edfbf1; }
-      .news { background:var(--cloud); padding:58px 0; }
-      .news-header { display:flex; justify-content:space-between; align-items:end; margin-bottom:25px; }
-      .news-header h2 { text-align:left; }
-      .more { color:var(--teal); font-weight:800; font-size:13px; }
-      .news-grid { display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:18px; }
-      .story { min-height:170px; padding:25px; background:#fff; border-bottom:3px solid transparent; box-shadow:0 5px 18px rgba(27,58,66,.05); }
-      .story:first-child { background:var(--navy); color:#fff; border-color:var(--gold); }
-      .story time { color:#21adaf; font-size:11px; font-weight:800; }
-      .story h3 { font-size:17px; line-height:1.35; margin:13px 0 0; }
-      .story:not(:first-child) h3 { font-size:14px; }
-      footer { background:#15263b; color:#ccd8e1; padding:42px 0; }
-      .footer-row { display:flex; justify-content:space-between; gap:28px; }
-      .footer-row p { font-size:12px; line-height:1.8; margin:10px 0 0; max-width:350px; }
-      .footer-title { color:#fff; font-size:13px; font-weight:800; }
-      @media (max-width: 900px) { .utility-nav{display:none}.identity{gap:15px}.motto{display:none}.search{width:180px}.menu a{padding:0 9px;font-size:10px}.hero-copy{padding-left:25px}.faculty-grid{grid-template-columns:repeat(2,1fr)} }
-      @media (max-width: 650px) { .container{width:min(100% - 28px,1170px)}.utility{height:32px}.identity{min-height:78px}.brand{min-width:0}.brand-logo{height:58px}.brand-text{font-size:9px}.quick .search,.quick .btn:not(.enroll){display:none}.quick .enroll{font-size:10px;padding:0 9px;min-height:35px}.menu-inner{min-height:48px}.menu a{display:none}.menu a:first-child{display:flex}.hamburger{display:block;margin-left:auto;background:none;border:0;color:#fff;font-size:23px;cursor:pointer}.menu.open .menu-inner{display:block;padding:8px 0}.menu.open a{display:flex;min-height:40px}.menu.open .hamburger{position:absolute;right:20px;top:110px}.hero,.hero-content{min-height:390px}.hero{background-position:62% center}.hero-copy{padding:20px 16px 0;align-self:center}.scribble{margin-left:25px}.eyebrow{margin-top:46px;font-size:10px}.hero h1{font-size:29px;max-width:340px}.slide-nav{right:15px}.benefits{margin:0;width:100%;grid-template-columns:1fr;padding:22px 24px;gap:18px;box-shadow:none}.faculties{padding-top:35px}.faculty-grid,.news-grid{grid-template-columns:1fr}.faculty{min-height:58px}.news{padding:40px 0}.footer-row{display:block}.footer-row>div+div{margin-top:25px} }
-      .news, .story, .news-grid { all: unset; }
-      .news { display:block; background:#f2f7f8; padding:0 0 78px; }
-      .section-title { text-align:center; font-size:30px; line-height:1.25; margin:0; }
-      .section-title:after { content:""; display:block; width:58px; height:9px; border-top:3px solid var(--teal); border-radius:50%; margin:13px auto 30px; transform:rotate(-5deg); }
-      .news-ribbon { background:linear-gradient(90deg,#3b9fae,#75bec7,#258ca4); color:white; text-align:center; min-height:45px; display:flex; align-items:center; justify-content:center; gap:16px; font:700 italic 16px Georgia,serif; letter-spacing:1px; box-shadow:0 4px 10px rgba(0,92,113,.18); }
-      .news-ribbon span:first-child { font:700 25px Manrope,sans-serif; }
-      .news-wrap { padding-top:58px; }
-      .news-layout { display:grid; grid-template-columns:minmax(0,1fr) 285px; gap:34px; align-items:start; max-width:970px; margin:auto; }
-      .news-main { min-width:0; }
-      .news-tools { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; }
-      .filter-group { display:flex; gap:7px; flex-wrap:wrap; }
-      .filter-btn { border:0; background:#fff; color:#5b6870; cursor:pointer; min-height:35px; padding:0 12px; font-size:11px; font-weight:800; }
-      .filter-btn[aria-pressed="true"] { background:#e73564; color:#fff; }
-      .announcement-link { display:inline-flex; align-items:center; justify-content:center; background:#e7aa25; color:#fff; font-size:11px; font-weight:800; min-height:35px; padding:0 17px; white-space:nowrap; }
-      .news-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px; }
-      .news-card { display:block; background:#fff; box-shadow:0 7px 24px rgba(41,78,88,.08); transition:transform .2s,box-shadow .2s; }
-      .news-card:hover { transform:translateY(-4px); box-shadow:0 12px 26px rgba(41,78,88,.16); }
-      .news-card[hidden] { display:none; }
-      .news-card img { width:100%; aspect-ratio:1.75; object-fit:cover; display:block; }
-      .news-card-copy { padding:14px 15px 19px; min-height:112px; }
-      .news-card time,.news-card .tag { display:block; color:#ef4570; font-size:10px; font-weight:800; margin-bottom:6px; }
-      .news-card .tag { color:#dca41b; }
-      .news-card h3 { color:#25303b; font-size:13px; line-height:1.38; margin:0; }
-      .news-card .views { color:#d9a314; font-size:11px; margin-top:8px; }
-      .news-more { display:inline-block; margin:23px 0 0; color:#e53663; font-size:12px; font-weight:800; }
-      .notice-panel { background:#fff; border:1px solid #e6eaec; padding:19px 17px 8px; box-shadow:0 7px 24px rgba(41,78,88,.06); }
-      .notice-panel h3 { margin:0 0 12px; font-size:17px; }
-      .notice-item { display:flex; gap:10px; padding:10px 0; border-top:1px solid #edf1f2; }
-      .notice-symbol { flex:none; width:35px; height:35px; display:grid; place-items:center; background:#e6f8fa; color:#078fa6; font-size:17px; font-weight:800; }
-      .notice-item:nth-of-type(even) .notice-symbol { color:white; background:#079bb0; }
-      .notice-item strong { display:block; font-size:11px; line-height:1.35; }
-      .notice-item time { display:block; color:#98a3a9; font-size:10px; margin-top:4px; }
-      .notice-all { display:block; border-top:1px solid #edf1f2; color:#e3a928; padding:13px 0 5px; font-size:12px; font-weight:800; }
-      .media-section { background:linear-gradient(115deg,#3ca6b1,#207ea8); padding:48px 0 55px; color:#fff; }
-      .media-layout { max-width:970px; margin:auto; display:grid; grid-template-columns:minmax(0,2fr) minmax(230px,1fr); gap:30px; }
-      .media-intro { background:#fff; color:#263541; padding:17px 20px; min-height:105px; display:flex; justify-content:space-between; align-items:center; gap:15px; }
-      .media-intro h2 { font-size:21px; margin:0 0 6px; }
-      .media-intro p { font-size:12px; line-height:1.4; margin:0 0 5px; }
-      .media-intro a { color:#dc2e60; font-size:11px; font-weight:800; }
-      .media-intro-mark { font-size:35px; color:#d5192d; line-height:1; }
-      .video-thumbs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; margin-top:16px; }
-      .video-thumb { display:block; position:relative; overflow:hidden; background:#17384c; }
-      .video-thumb img { width:100%; aspect-ratio:1.6; object-fit:cover; display:block; transition:transform .25s; }
-      .video-thumb:hover img { transform:scale(1.05); }
-      .play-small { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:35px; height:35px; border-radius:50%; display:grid; place-items:center; background:#e8345d; color:white; font-size:13px; padding-left:2px; }
-      .media-bottom { display:flex; justify-content:space-between; gap:15px; font-size:12px; margin-top:15px; }
-      .gazette-card { background:#fff; color:#253541; padding:18px; min-height:296px; text-align:center; }
-      .gazette-card h3 { font-size:16px; line-height:1.35; margin:0 0 12px; }
-      .gazette-card img { display:block; width:100%; max-width:150px; height:170px; object-fit:cover; object-position:top; margin:0 auto 13px; box-shadow:0 4px 10px rgba(0,0,0,.14); }
-      .gazette-card a { display:inline-block; color:white; background:#dc2e60; padding:9px 13px; font-size:11px; font-weight:800; }
-      .gazette-more { color:white; display:block; margin-top:15px; font-size:12px; text-align:center; }
-      .about-section { padding:90px 0 45px; overflow:hidden; }
-      .about-layout { max-width:970px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
-      .about-copy { position:relative; }
-      .about-copy:before { content:""; position:absolute; width:100px; height:100px; border-radius:50%; left:-40px; top:-50px; background-image:radial-gradient(#17c1bd 1px,transparent 1.7px); background-size:7px 7px; opacity:.5; z-index:-1; }
-      .about-copy h2 { font-size:27px; margin:0; }
-      .about-copy .accent { margin:10px 0 20px; }
-      .about-copy p { font-size:14px; line-height:1.9; color:#66737c; margin:0 0 15px; }
-      .about-link { font-size:12px; color:#e53663; font-weight:800; }
-      .about-photo { position:relative; margin:auto; width:min(100%,340px); }
-      .about-photo:before { content:""; position:absolute; inset:-22px -23px 18px 20px; border-radius:35% 24% 35% 25%; background:#fcebef; transform:rotate(8deg); }
-      .about-photo img { position:relative; display:block; width:100%; aspect-ratio:1; object-fit:cover; border-radius:4px; }
-      .stats { max-width:970px; margin:0 auto; padding:35px 0 65px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-      .stat { background:#fff; text-align:center; padding:17px 8px; box-shadow:0 7px 22px rgba(23,48,59,.11); }
-      .stat strong { display:block; font-size:27px; line-height:1.2; font-weight:500; color:#39a5b6; }
-      .stat:nth-child(2) strong { color:#e7aab5; }.stat:nth-child(3) strong { color:#a89ad5; }.stat:nth-child(4) strong { color:#e6b747; }
-      .stat span { color:#8a929a; font-size:11px; }
-      .request-section { background:#f3f8f9; padding:42px 20px 55px; text-align:center; }
-      .request-section h2 { font-size:24px; max-width:560px; margin:auto; }
-      .request-section a { display:inline-block; margin-top:20px; background:#ec3b68; color:white; font-size:12px; font-weight:800; padding:12px 20px; }
-      .promo-video { min-height:420px; position:relative; background:#162634 url('assets/video.jpg') center/cover no-repeat; color:white; display:grid; place-items:center; text-align:center; }
-      .promo-video:before { content:""; position:absolute; inset:0; background:rgba(6,17,24,.5); }
-      .promo-video-content { position:relative; max-width:600px; padding:35px; }
-      .promo-play { width:74px; height:74px; border-radius:50%; background:#ec3b68; display:grid; place-items:center; color:#fff; font-size:26px; padding-left:4px; margin:0 auto 22px; }
-      .promo-video h2 { font-size:27px; line-height:1.35; }
-      .contact-strip { max-width:670px; margin:-1px auto 0; transform:translateY(32px); background:#f4bd24; min-height:84px; display:flex; align-items:center; justify-content:center; gap:23px; padding:14px 26px; position:relative; z-index:2; }
-      .contact-strip a { display:block; font-size:18px; font-weight:800; }
-      .contact-strip small { font-size:11px; }
-      .contact-strip .or { border-radius:50%; background:white; width:40px; height:40px; display:grid; place-items:center; flex:none; font-size:11px; font-weight:800; }
-      .partners { padding:75px 0 50px; }
-      .partner-row { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:25px; max-width:950px; margin:auto; }
-      .partner-row img { max-width:130px; height:50px; width:auto; object-fit:contain; }
-      footer { background:#101313; color:#aeb8ba; padding:62px 0 20px; }
-      .footer-row { display:grid; grid-template-columns:1.3fr 1fr 1fr 1.2fr; gap:45px; }
-      .footer-row h3 { color:white; font-size:14px; margin:0 0 16px; }
-      .footer-row p { font-size:12px; line-height:1.8; }
-      .footer-links { display:grid; gap:8px; }
-      .footer-links a { font-size:12px; color:#aeb8ba; }
-      .footer-links a:hover { color:#fff; }
-      .footer-map { height:150px; border:0; width:100%; background:#e5ebed; }
-      .footer-bottom { border-top:1px solid #303637; text-align:center; margin-top:45px; padding-top:18px; color:#6d8d93; font-size:11px; }
-      @media(max-width:900px){ .news-layout{grid-template-columns:1fr}.notice-panel{max-width:none}.media-layout{grid-template-columns:1fr}.about-layout{gap:35px}.footer-row{grid-template-columns:repeat(2,1fr)} }
-      @media(max-width:650px){ .news-ribbon{font-size:12px;gap:8px;padding:8px 14px}.news-wrap{padding-top:40px}.section-title{font-size:24px}.news-cards{grid-template-columns:1fr}.news-tools{align-items:flex-start;flex-direction:column}.announcement-link{width:100%}.media-section{padding:35px 0}.media-intro h2{font-size:18px}.video-thumbs{grid-template-columns:1fr}.gazette-card{min-height:0}.about-section{padding:60px 0 25px}.about-layout{grid-template-columns:1fr;gap:40px}.about-photo{max-width:270px}.stats{grid-template-columns:repeat(2,1fr);padding:30px 0 50px}.promo-video{min-height:350px}.promo-video h2{font-size:21px}.contact-strip{flex-wrap:wrap;gap:8px;text-align:center}.contact-strip a{font-size:15px}.partners{padding:70px 0 35px}.partner-row{justify-content:center;gap:20px}.partner-row img{max-width:95px;height:42px}.footer-row{grid-template-columns:1fr;gap:25px}.footer-bottom{margin-top:30px} }
-      /* First AYU Figma frame: proportions, official artwork, and footer. */
-      .container { width:min(1320px,calc(100% - 40px)); }
-      .utility { height:56px; background:#1d2331; }
-      .identity { min-height:148px; }
-      .identity .brand-logo { height:110px; }
-      .menu { background:#2d91a5; }
-      .menu-inner { min-height:100px; flex-wrap:wrap; justify-content:flex-start; align-content:center; }
-      .menu a { height:50px; border:0; padding:0 18px; }
-      .menu-break { flex-basis:100%; height:0; }
-      .hero,.hero-content { min-height:clamp(500px,42.3vw,812px); }
-      .hero { background-position:center 70%; }
-      .hero-content:before { content:""; position:absolute; left:-8%; top:16%; width:130px; height:130px; border-radius:50%; background:conic-gradient(#1cc6b4 0 20%,transparent 20% 27%,#1cc6b4 27% 52%,transparent 52% 58%,#1cc6b4 58% 80%,transparent 80% 88%,#1cc6b4 88%); -webkit-mask:radial-gradient(transparent 58%,#000 60%); mask:radial-gradient(transparent 58%,#000 60%); opacity:.9; }
-      .hero-copy { padding-left:0; max-width:650px; }
-      .hero h1 { font-size:46px; max-width:650px; }
-      .benefits { width:min(1320px,calc(100% - 40px)); min-height:150px; padding:35px 44px; margin:35px auto 0; }
-      .faculties { padding:60px 0 90px; }
-      .faculty-grid { max-width:1320px; gap:18px 22px; }
-      .faculty { min-height:85px; padding:13px 20px; gap:20px; }
-      .faculty img { width:48px; height:48px; object-fit:contain; flex:none; }
-      .f10 { background:#edf9f8; }.f11 { background:#fff2f3; }.f12 { background:#eefaf4; }
-      .news { background:#f0f5f6 url('assets/news-map-dots.png') no-repeat left 85%; background-size:480px auto; }
-      .news-wrap { padding-top:70px; }
-      .news-layout,.media-layout,.about-layout,.stats,.partner-row { max-width:1320px; }
-      .news-layout { grid-template-columns:minmax(0,2fr) minmax(270px,.82fr); gap:55px; }
-      .news-card img { aspect-ratio:1.65; }
-      .news-card-copy { min-height:150px; }
-      .news-card .tag { display:inline-block; padding:3px 8px; background:#fff1f5; color:#d94167; }
-      .news-card h3 { font-size:14px; }
-      .news-ribbon { min-height:65px; box-shadow:0 -12px 20px rgba(38,143,166,.22),0 4px 10px rgba(0,92,113,.18); }
-      .contact-strip { background-color:#f4bd24; background-image:repeating-radial-gradient(circle at 20% 130%,transparent 0 18px,rgba(183,134,18,.11) 19px 20px,transparent 21px 36px); border-radius:5px; }
-      .partners { padding:75px 0 45px; }
-      .partner-row img { max-width:145px; height:75px; }
-      footer { position:relative; background:#111212 url('assets/footer-pattern.webp') center top / 1920px auto no-repeat; color:#aeb8ba; padding:100px 0 0; }
-      .footer-row { grid-template-columns:1.05fr .85fr 1fr 1.2fr; gap:60px; min-height:600px; }
-      .footer-brand { display:flex; align-items:center; flex-direction:column; color:#fff; text-align:center; width:260px; max-width:100%; }
-      .footer-brand img { display:block; width:190px; height:150px; object-fit:contain; }
-      .footer-brand strong { font-size:16px; line-height:1.4; }
-      .footer-brand-column>p { max-width:280px; }
-      .footer-row h3 { font-size:17px; }
-      .footer-links { gap:5px; }
-      .footer-links a { line-height:1.55; }
-      .footer-map { height:300px; border-radius:15px; }
-      .footer-bottom { width:100%; max-width:none; background:rgba(0,0,0,.18); border-top:1px solid #272a2a; margin:0; padding:25px 20px; }
-      .footer-bottom a:hover { color:#fff; }
-      @media(max-width:1100px){ .utility{height:38px}.identity{min-height:110px}.identity .brand-logo{height:84px}.menu-inner{min-height:75px}.menu a{height:37px;padding:0 12px}.hero,.hero-content{min-height:clamp(470px,43vw,600px)}.benefits{margin:15px auto 0}.footer-row{gap:25px;min-height:0}.footer-brand img{width:140px;height:115px}.footer-map{height:220px} }
-      @media(max-width:900px){ .menu-inner{min-height:70px}.hero-content:before{left:0;width:90px;height:90px}.benefits{padding:26px}.news-layout{gap:30px}.footer-row{grid-template-columns:repeat(2,1fr);gap:35px} }
-      @media(max-width:650px){ .container{width:calc(100% - 28px)}.utility{height:32px}.identity{min-height:78px}.identity .brand-logo{height:58px}.menu-inner{min-height:48px;display:flex;align-content:normal}.menu a{height:auto}.menu-break{display:none}.menu.open .menu-inner{min-height:48px}.hero,.hero-content{min-height:390px}.hero h1{font-size:29px}.hero-copy{padding-left:16px}.hero-content:before{left:2%;top:12%;width:72px;height:72px}.benefits{width:100%;margin:0;padding:22px 24px;min-height:0}.faculties{padding:35px 0 60px}.faculty-grid{grid-template-columns:1fr}.faculty{min-height:70px}.faculty img{width:38px;height:38px}.news-ribbon{min-height:48px}.news-wrap{padding-top:40px}.news-card-copy{min-height:0}.news-card img{aspect-ratio:1.75}.footer-row{grid-template-columns:1fr;gap:30px}.footer-brand{align-items:flex-start;text-align:left}.footer-brand img{width:150px;height:115px}.footer-map{height:220px}footer{padding-top:55px}.partner-row img{height:50px;max-width:100px} }
-      /* News and announcements: first Figma frame. */
-      .news { position:relative; isolation:isolate; overflow:hidden; background:#eef3f4 url('assets/news-map-dots.png') no-repeat left bottom / 500px auto; padding-bottom:100px; }
-      .news:after { content:""; position:absolute; z-index:-1; right:-70px; top:85px; width:500px; height:500px; background:radial-gradient(#cdd8da 1.2px,transparent 1.5px) 0 0/9px 9px; opacity:.72; mask-image:radial-gradient(ellipse at center,#000 25%,transparent 72%); }
-      .news-wrap { padding-top:30px; }
-      .news .section-title { color:#191919; font-size:36px; font-weight:800; }
-      .news .section-title:after { width:100px; height:15px; border-top:5px solid #2c94a6; margin:14px auto 37px; }
-      .news-layout { max-width:1218px; grid-template-columns:minmax(0,800px) minmax(0,338px); gap:80px; }
-      .news-tools { justify-content:center; margin-bottom:47px; }
-      .filter-group { gap:17px; flex-wrap:nowrap; }
-      .filter-btn { position:relative; min-width:145px; height:64px; padding:0 20px; border-radius:5px; background:#ece8e3; color:#222; font-size:14px; font-weight:500; }
-      .filter-btn:first-child { min-width:168px; }
-      .filter-btn[aria-pressed="true"] { background:#f04463; color:#fff; }
-      .filter-btn[aria-pressed="true"]:after { content:""; position:absolute; left:calc(50% - 8px); bottom:-9px; border-left:8px solid transparent; border-right:8px solid transparent; border-top:10px solid #f04463; }
-      .news-cards { gap:27px 28px; }
-      .news-cards[hidden],.news-empty[hidden],.news-more[hidden] { display:none; }
-      .news-card { position:relative; border-radius:4px; overflow:hidden; box-shadow:none; }
-      .news-card img { aspect-ratio:1.67; }
-      .news-card .news-date { position:absolute; top:9px; left:9px; display:block; margin:0; padding:6px 8px; background:#ffba18; color:#fff; border-radius:4px; font-size:14px; line-height:1.2; font-weight:400; letter-spacing:.4px; }
-      .news-card-copy { min-height:172px; padding:29px 28px 20px; }
-      .news-card .tag { margin:0 0 17px; background:#fde8eb; color:#f04463; font-size:12px; font-weight:400; }
-      .news-card h3 { color:#1b1b1b; font-size:13px; line-height:1.38; font-weight:800; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; }
-      .news-card .views { color:#ffad00; font-size:19px; letter-spacing:1px; line-height:1; margin-top:15px; }
-      .news-more { color:#ff5065; font-size:16px; margin:26px 0 0 33px; }
-      .news-empty { min-height:360px; background:#fff; padding:35px; color:#25303b; }
-      .news-empty a { display:block; margin-top:15px; color:#f04463; font-weight:700; }
-      /* Narrow, divided utility header and the five social marks in the reference. */
-      .utility { font-size:12px; }
-      .utility .container { width:min(1120px,calc(100% - 32px)); justify-content:flex-start; }
-      .utility-nav { height:100%; gap:0; white-space:nowrap; }
-      .utility-nav a { display:flex; align-items:center; height:100%; padding:0 15px; border-right:1px solid rgba(255,255,255,.09); }
-      .utility-nav a:first-child { color:#777c88; padding-left:0; }
-      .socials { margin-left:auto; gap:9px; color:#f6f7f9; }
-      .socials svg { width:14px; height:14px; display:block; fill:currentColor; }
-      .socials .social-instagram svg { fill:none; stroke:currentColor; stroke-width:2; }
-      .socials span:nth-child(3) { display:block; width:14px; height:14px; background:url('assets/twitter.svg') center/contain no-repeat; }
-      .socials span:nth-child(3) svg { display:none; }
-      .socials .social-linkedin svg { width:18px; }
-      .socials .social-youtube svg { width:18px; }
-      .langs { height:100%; margin-left:30px; padding-left:32px; gap:12px; border-left:1px solid rgba(255,255,255,.1); color:#747986; letter-spacing:1px; }
-      .langs .active { color:#834153; }
-      .news-aside { min-width:0; }
-      .announcement-link { position:relative; display:flex; height:64px; margin:7px 0 39px; border-radius:5px; background:#f4b523; color:#fff; font-size:22px; font-weight:400; }
-      .announcement-link:after { content:""; position:absolute; left:calc(50% - 8px); bottom:-14px; border-left:8px solid transparent; border-right:8px solid transparent; border-top:15px solid #f4b523; }
-      .notice-panel { border:0; box-shadow:none; padding:24px 18px 17px; }
-      .notice-item { align-items:flex-start; min-height:98px; gap:18px; padding:0; border:0; }
-      .notice-symbol,.notice-item:nth-of-type(even) .notice-symbol { display:flex; flex:none; justify-content:center; align-items:center; width:75px; height:75px; border-radius:5px; background:#cfd9df; color:#fff; }
-      .notice-logo img { max-width:54px; max-height:58px; object-fit:contain; }
-      .notice-item .notice-symbol.notice-schedule { background:#039bae; text-align:center; }
-      .notice-schedule small { color:#fff; font-size:7px; line-height:1.25; font-weight:900; }
-      .notice-item strong { color:#15263c; font-size:14px; line-height:1.2; margin:8px 0 8px; }
-      .notice-item time { color:#596675; font-size:12px; margin-top:0; }
-      .notice-item time:before { content:""; display:inline-block; width:14px; height:14px; margin-right:7px; vertical-align:-2px; background:url('assets/calendar.svg') center/contain no-repeat; }
-      .notice-all { border:0; color:#f2a900; font-size:11px; padding:0; margin-top:0; }
-      @media(max-width:1250px) { .news-layout{gap:35px;grid-template-columns:minmax(0,2fr) minmax(285px,.85fr)} }
-      @media(max-width:1100px) { .utility-nav a{padding:0 9px}.langs{margin-left:18px;padding-left:18px} }
-      @media(max-width:900px) { .news-layout{grid-template-columns:1fr;gap:40px}.news-aside{max-width:460px;margin:auto;width:100%}.news-tools{margin-bottom:28px}.announcement-link{margin-top:0} }
-      @media(max-width:650px) { .news .section-title{font-size:26px}.news-wrap{padding-top:36px}.filter-group{gap:6px;width:100%}.filter-btn,.filter-btn:first-child{min-width:0;flex:1;padding:0 5px;height:48px;font-size:10px}.news-cards{grid-template-columns:1fr}.news-card-copy{min-height:155px}.news-more{margin-left:0;font-size:13px}.announcement-link{font-size:18px}.news{padding-bottom:60px} }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <div class="utility"><div class="container"><nav class="utility-nav"><a href="#">AVESIS</a><a href="#" data-i18n="foreign">Шетелдік студенттер</a><a href="#" data-i18n="applicants">Талапкерлерге</a><a href="#" data-i18n="graduates">Түлек</a><a href="#" data-i18n="quality">Сапасы</a><a href="#" data-i18n="library">Кітапхана</a><a href="#" data-i18n="contactsShort">Жедел байланыстар</a></nav><div class="socials" aria-label="Әлеуметтік желілер"><span aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3H13c-2.7 0-4.3 1.7-4.3 4.5V10H6v3.4h2.7V21h3.6v-7.6h2.9l.5-3.4h-3.4V7.8c0-1 .3-1.4 1.5-1.4h1.7V3z"/></svg></span><span class="social-instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.8" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg></span><span aria-label="X / Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 6.1c-.7.3-1.4.5-2.2.6.8-.5 1.4-1.2 1.7-2.1-.8.5-1.6.8-2.5 1a3.8 3.8 0 0 0-6.5 3.5 3.5 0 0 0-.1 1.7 10.8 10.8 0 0 1-7.9-4 3.8 3.8 0 0 0 1.2 5.1c-.6 0-1.2-.2-1.7-.5v.1c0 1.9 1.3 3.5 3.1 3.8-.5.1-1.1.2-1.7.1.5 1.5 1.9 2.6 3.5 2.6A7.7 7.7 0 0 1 3 16.1a10.7 10.7 0 0 0 5.8 1.7c7 0 10.8-5.8 10.8-10.8v-.5c.8-.5 1.4-1.1 2-1.8z"/></svg></span><span class="social-linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 8.5h3.5V21H3.2zM5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm4.3 5.5h3.4v1.7c.5-1 1.7-2 3.5-2 3.7 0 4.4 2.4 4.4 5.5V21h-3.5v-6.5c0-1.5 0-3.4-2.1-3.4s-2.4 1.7-2.4 3.3V21H9.3z"/></svg></span><span class="social-youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 7.3a2.8 2.8 0 0 0-2-2C18 4.8 12 4.8 12 4.8s-6 0-7.7.5a2.8 2.8 0 0 0-2 2C1.8 9 1.8 12 1.8 12s0 3 .5 4.7a2.8 2.8 0 0 0 2 2c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.7.5-4.7s0-3-.5-4.7zM10 15.4V8.6l6 3.4z"/></svg></span></div><div class="langs"><a class="active" href="#" data-lang="kz">KZ</a><a href="#" data-lang="tr">TR</a><a href="#" data-lang="en">EN</a><a href="#" data-lang="ru">RU</a></div></div></div>
-      <div class="container identity">
-        <a class="brand" href="#top" aria-label="Ахмет Ясауи университеті"><img class="brand-logo" src="assets/ayu-logo.png" alt="Ахмет Ясауи университеті" /></a>
-        <p class="motto" data-i18n="motto">"Ілім — жүрек жарығы, ақылға шырақ"<br><small>Ахмет Ясауи</small></p>
-        <div class="quick"><label class="search"><input aria-label="Іздеу" placeholder="Іздеу" data-i18n-placeholder="search" /><span>⌕</span></label><button class="btn" data-message="Платонусқа өту мүмкіндігі дайындалады">AYU PLATONUS →</button><button class="btn enroll" data-message="Өтінім формасы жақында ашылады" data-i18n="foreignRegistration">Шетелдік студенттер тіркелуі</button></div>
+      <div class="utility">
+        <div class="container">
+          <nav class="utility-nav">
+            <a href="#">AVESIS</a>
+            <a href="#" data-i18n="foreign">Шетелдік студенттер</a>
+            <a href="#" data-i18n="applicants">Талапкерлерге</a>
+            <a href="#" data-i18n="graduates">Түлек</a>
+            <a href="#" data-i18n="quality">Сапасы</a>
+            <a href="#" data-i18n="library">Кітапхана</a>
+            <a href="#" data-i18n="contactsShort">Жедел байланыстар</a>
+          </nav>
+          <div class="socials" aria-label="Әлеуметтік желілер">
+            <span aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M15.5 3H13c-2.7 0-4.3 1.7-4.3 4.5V10H6v3.4h2.7V21h3.6v-7.6h2.9l.5-3.4h-3.4V7.8c0-1 .3-1.4 1.5-1.4h1.7V3z"
+                />
+              </svg>
+            </span>
+            <span class="social-instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
+                <circle cx="12" cy="12" r="4.2" />
+                <circle
+                  cx="17.8"
+                  cy="6.5"
+                  r=".8"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+            </span>
+            <span aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21.6 6.1c-.7.3-1.4.5-2.2.6.8-.5 1.4-1.2 1.7-2.1-.8.5-1.6.8-2.5 1a3.8 3.8 0 0 0-6.5 3.5 3.5 0 0 0-.1 1.7 10.8 10.8 0 0 1-7.9-4 3.8 3.8 0 0 0 1.2 5.1c-.6 0-1.2-.2-1.7-.5v.1c0 1.9 1.3 3.5 3.1 3.8-.5.1-1.1.2-1.7.1.5 1.5 1.9 2.6 3.5 2.6A7.7 7.7 0 0 1 3 16.1a10.7 10.7 0 0 0 5.8 1.7c7 0 10.8-5.8 10.8-10.8v-.5c.8-.5 1.4-1.1 2-1.8z"
+                />
+              </svg>
+            </span>
+            <span class="social-linkedin" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M3.2 8.5h3.5V21H3.2zM5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm4.3 5.5h3.4v1.7c.5-1 1.7-2 3.5-2 3.7 0 4.4 2.4 4.4 5.5V21h-3.5v-6.5c0-1.5 0-3.4-2.1-3.4s-2.4 1.7-2.4 3.3V21H9.3z"
+                />
+              </svg>
+            </span>
+            <span class="social-youtube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21.7 7.3a2.8 2.8 0 0 0-2-2C18 4.8 12 4.8 12 4.8s-6 0-7.7.5a2.8 2.8 0 0 0-2 2C1.8 9 1.8 12 1.8 12s0 3 .5 4.7a2.8 2.8 0 0 0 2 2c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.7.5-4.7s0-3-.5-4.7zM10 15.4V8.6l6 3.4z"
+                />
+              </svg>
+            </span>
+          </div>
+          <div class="langs">
+            <a class="active" href="#" data-lang="kz">KZ</a>
+            <a href="#" data-lang="tr">TR</a>
+            <a href="#" data-lang="en">EN</a>
+            <a href="#" data-lang="ru">RU</a>
+          </div>
+        </div>
       </div>
-      <nav class="menu" id="main-menu"><div class="container menu-inner"><a href="#top" data-i18n="home">Басты бет</a><a href="#about" data-i18n="university">Университетіміз</a><a href="#faculties" data-i18n="academic">Академиялық</a><a href="#faculties" data-i18n="institutes">Институттар</a><a href="#news" data-i18n="science">Ғылым</a><a href="#news" data-i18n="excellence">Академиялық үстемдік орталығы</a><a href="#news" data-i18n="students">Студенттер үшін</a><span class="menu-break" aria-hidden="true"></span><a href="#footer" data-i18n="contact">Байланыс</a><a href="https://ayu.edu.kz/birimler/kz/1-sapa" data-i18n="quality">Сапасы</a><button class="hamburger" aria-label="Мәзірді ашу" aria-expanded="false">☰</button></div></nav>
+      <div class="container identity">
+        <a class="brand" href="#top" aria-label="Ахмет Ясауи университеті">
+          <img
+            class="brand-logo"
+            src="assets/ayu-logo.png"
+            alt="Ахмет Ясауи университеті"
+          />
+        </a>
+        <p class="motto" data-i18n="motto">
+          "Ілім — жүрек жарығы, ақылға шырақ"
+          <br />
+          <small>Ахмет Ясауи</small>
+        </p>
+        <div class="quick">
+          <label class="search">
+            <input
+              aria-label="Іздеу"
+              placeholder="Іздеу"
+              data-i18n-placeholder="search"
+            />
+            <span>⌕</span>
+          </label>
+          <button
+            class="btn"
+            data-message="Платонусқа өту мүмкіндігі дайындалады"
+          >
+            AYU PLATONUS →
+          </button>
+          <button
+            class="btn enroll"
+            data-message="Өтінім формасы жақында ашылады"
+            data-i18n="foreignRegistration"
+          >
+            Шетелдік студенттер тіркелуі
+          </button>
+        </div>
+      </div>
+      <nav class="menu" id="main-menu">
+        <div class="container menu-inner">
+          <a href="#top" data-i18n="home">Басты бет</a>
+          <a href="#about" data-i18n="university">Университетіміз</a>
+          <a href="#faculties" data-i18n="academic">Академиялық</a>
+          <a href="#faculties" data-i18n="institutes">Институттар</a>
+          <a href="#news" data-i18n="science">Ғылым</a>
+          <a href="#news" data-i18n="excellence">
+            Академиялық үстемдік орталығы
+          </a>
+          <a href="#news" data-i18n="students">Студенттер үшін</a>
+          <span class="menu-break" aria-hidden="true"></span>
+          <a href="#footer" data-i18n="contact">Байланыс</a>
+          <a href="https://ayu.edu.kz/birimler/kz/1-sapa" data-i18n="quality">
+            Сапасы
+          </a>
+          <button
+            class="hamburger"
+            aria-label="Мәзірді ашу"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
     </header>
     <main id="top">
-      <section class="hero" aria-label="Университетке қош келдіңіз"><div class="container hero-content"><div class="hero-copy"><div class="scribble">〰</div><p class="eyebrow" data-i18n="welcome">АХМЕТ ЯСАУИ УНИВЕРСИТЕТІНЕ ҚОШ КЕЛДІҢІЗ!</p><h1 data-i18n="heroTitle">Түркі Әлемінің<br />Жарқыраған Жұлдызы</h1></div></div><div class="slide-nav"><button class="round" id="next" aria-label="Келесі слайд">→</button><button class="round" id="previous" aria-label="Алдыңғы слайд">←</button></div></section>
-      <section class="benefits" aria-label="Университет артықшылықтары"><article class="benefit"><span class="benefit-icon">⌁</span><div><strong data-i18n="benefitOne">Шәкіртақы алу мүмкіндігі</strong><p data-i18n="benefitOneText">Біздің университет өз студенттеріне түрлі ұйымдардан шәкіртақы ұсынады.</p></div></article><article class="benefit"><span class="benefit-icon">✥</span><div><strong data-i18n="benefitTwo">Бағдарламалар</strong><p data-i18n="benefitTwoText">Көптеген ғылыми салаларда мол еңбектерін жариялаған таңдаулы оқытушылар.</p></div></article><article class="benefit"><span class="benefit-icon">▥</span><div><strong data-i18n="library">Кітапхана</strong><p data-i18n="benefitThreeText">Іріктеулі кітаптарды қамтитын университет кітапханасы.</p></div></article></section>
-      <section class="faculties container" id="faculties"><h2 data-i18n="faculties">Факультеттер</h2><div class="accent"></div><div class="faculty-grid">
-        <a href="https://ayu.edu.kz/birimler/kz/4-dis-hekimligi-fakultesi" class="faculty f1"><img src="assets/faculty-dentistry.png" alt="" /><b data-i18n="facultyOne">Стоматология факультеті</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-fen-bilimleri-fakultesi" class="faculty f2"><img src="assets/faculty-natural.png" alt="" /><b data-i18n="facultyTwo">Жаратылыстану ғылымдары факультеті</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-filoloji-fakultesi" class="faculty f3"><img src="assets/faculty-philology.png" alt="" /><b data-i18n="facultyThree">Филология факультеті</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-hazirlik-okulu" class="faculty f4"><img src="assets/faculty-prep.png" alt="" /><b data-i18n="facultyFour">Дайындық орталығы</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-iktisadi-ve-idari-bilimler-fakultesi" class="faculty f5"><img src="assets/faculty-economics.png" alt="" /><b data-i18n="facultyFive">Экономика, басқару және құқық факультеті</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-ilahiyat-fakultesi" class="faculty f6"><img src="assets/faculty-theology.png" alt="" /><b data-i18n="facultySix">Теология факультеті</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-egitim-ve-beseri-bilimler-fakultesi" class="faculty f7"><img src="assets/faculty-humanities.png" alt="" /><b data-i18n="facultySeven">Әлеуметтік-гуманитарлық ғылымдар факультеті</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-lisansustu-tip-egitimi-fakultesi" class="faculty f8"><img src="assets/faculty-postmed.png" alt="" /><b data-i18n="facultyEight">Жоғары медициналық білімнен кейінгі білім беру</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-muhendislik-fakultesi" class="faculty f9"><img src="assets/faculty-engineering.png" alt="" /><b data-i18n="facultyNine">Инженерия факультеті</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-spor-fakultesi" class="faculty f10"><img src="assets/faculty-sport.png" alt="" /><b data-i18n="facultyTen">Спорт және өнер факультеті</b></a>
-        <a href="https://ayu.edu.kz/birimler/kz/4-tip-fakultesi" class="faculty f11"><img src="assets/faculty-medicine.png" alt="" /><b data-i18n="facultyEleven">Медицина факультеті</b></a>
-        <a href="https://ayu.edu.kz/kz/programlar/" class="faculty f12"><img src="assets/faculty-programmes.svg" alt="" /><b data-i18n="facultyTwelve">Бағдарламалар</b></a>
-      </div></section>
+      <section class="hero" aria-label="Университетке қош келдіңіз">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <div class="scribble">〰</div>
+            <p class="eyebrow" data-i18n="welcome">
+              АХМЕТ ЯСАУИ УНИВЕРСИТЕТІНЕ ҚОШ КЕЛДІҢІЗ!
+            </p>
+            <h1 data-i18n="heroTitle">
+              Түркі Әлемінің
+              <br />
+              Жарқыраған Жұлдызы
+            </h1>
+          </div>
+        </div>
+        <div class="slide-nav">
+          <button class="round" id="next" aria-label="Келесі слайд">→</button>
+          <button class="round" id="previous" aria-label="Алдыңғы слайд">
+            ←
+          </button>
+        </div>
+      </section>
+      <section class="benefits" aria-label="Университет артықшылықтары">
+        <article class="benefit">
+          <span class="benefit-icon">⌁</span>
+          <div>
+            <strong data-i18n="benefitOne">Шәкіртақы алу мүмкіндігі</strong>
+            <p data-i18n="benefitOneText">
+              Біздің университет өз студенттеріне түрлі ұйымдардан шәкіртақы
+              ұсынады.
+            </p>
+          </div>
+        </article>
+        <article class="benefit">
+          <span class="benefit-icon">✥</span>
+          <div>
+            <strong data-i18n="benefitTwo">Бағдарламалар</strong>
+            <p data-i18n="benefitTwoText">
+              Көптеген ғылыми салаларда мол еңбектерін жариялаған таңдаулы
+              оқытушылар.
+            </p>
+          </div>
+        </article>
+        <article class="benefit">
+          <span class="benefit-icon">▥</span>
+          <div>
+            <strong data-i18n="library">Кітапхана</strong>
+            <p data-i18n="benefitThreeText">
+              Іріктеулі кітаптарды қамтитын университет кітапханасы.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="faculties container" id="faculties">
+        <h2 data-i18n="faculties">Факультеттер</h2>
+        <div class="accent"></div>
+        <div class="faculty-grid">
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-dis-hekimligi-fakultesi"
+            class="faculty f1"
+          >
+            <img src="assets/faculty-dentistry.png" alt="" />
+            <b data-i18n="facultyOne">Стоматология факультеті</b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-fen-bilimleri-fakultesi"
+            class="faculty f2"
+          >
+            <img src="assets/faculty-natural.png" alt="" />
+            <b data-i18n="facultyTwo">Жаратылыстану ғылымдары факультеті</b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-filoloji-fakultesi"
+            class="faculty f3"
+          >
+            <img src="assets/faculty-philology.png" alt="" />
+            <b data-i18n="facultyThree">Филология факультеті</b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-hazirlik-okulu"
+            class="faculty f4"
+          >
+            <img src="assets/faculty-prep.png" alt="" />
+            <b data-i18n="facultyFour">Дайындық орталығы</b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-iktisadi-ve-idari-bilimler-fakultesi"
+            class="faculty f5"
+          >
+            <img src="assets/faculty-economics.png" alt="" />
+            <b data-i18n="facultyFive">
+              Экономика, басқару және құқық факультеті
+            </b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-ilahiyat-fakultesi"
+            class="faculty f6"
+          >
+            <img src="assets/faculty-theology.png" alt="" />
+            <b data-i18n="facultySix">Теология факультеті</b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-egitim-ve-beseri-bilimler-fakultesi"
+            class="faculty f7"
+          >
+            <img src="assets/faculty-humanities.png" alt="" />
+            <b data-i18n="facultySeven">
+              Әлеуметтік-гуманитарлық ғылымдар факультеті
+            </b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-lisansustu-tip-egitimi-fakultesi"
+            class="faculty f8"
+          >
+            <img src="assets/faculty-postmed.png" alt="" />
+            <b data-i18n="facultyEight">
+              Жоғары медициналық білімнен кейінгі білім беру
+            </b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-muhendislik-fakultesi"
+            class="faculty f9"
+          >
+            <img src="assets/faculty-engineering.png" alt="" />
+            <b data-i18n="facultyNine">Инженерия факультеті</b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-spor-fakultesi"
+            class="faculty f10"
+          >
+            <img src="assets/faculty-sport.png" alt="" />
+            <b data-i18n="facultyTen">Спорт және өнер факультеті</b>
+          </a>
+          <a
+            href="https://ayu.edu.kz/birimler/kz/4-tip-fakultesi"
+            class="faculty f11"
+          >
+            <img src="assets/faculty-medicine.png" alt="" />
+            <b data-i18n="facultyEleven">Медицина факультеті</b>
+          </a>
+          <a href="https://ayu.edu.kz/kz/programlar/" class="faculty f12">
+            <img src="assets/faculty-programmes.svg" alt="" />
+            <b data-i18n="facultyTwelve">Бағдарламалар</b>
+          </a>
+        </div>
+      </section>
       <section class="news" id="news">
-        <div class="news-ribbon"><span aria-hidden="true">⌂</span><span data-i18n="ribbon">ТЕРЕҢ ТАРИХТАН ЖАРҚЫН БОЛАШАҚҚА!</span></div>
+        <div class="news-ribbon">
+          <span aria-hidden="true">⌂</span>
+          <span data-i18n="ribbon">ТЕРЕҢ ТАРИХТАН ЖАРҚЫН БОЛАШАҚҚА!</span>
+        </div>
         <div class="container news-wrap">
-          <h2 class="section-title" data-i18n="news">Жаңалықтар &amp; Хабарландырулар</h2>
+          <h2 class="section-title" data-i18n="news">
+            Жаңалықтар &amp; Хабарландырулар
+          </h2>
           <div class="news-layout">
             <div class="news-main">
-              <div class="news-tools"><div class="filter-group" role="group" aria-label="Жаңалықтар сүзгісі"><button class="filter-btn" type="button" data-filter="all" aria-pressed="true" data-i18n="filterAll">ЖАҢАЛЫҚТАР</button><button class="filter-btn" type="button" data-filter="vacancy" aria-pressed="false" data-i18n="filterVacancy">ВАКАНСИЯ</button><button class="filter-btn" type="button" data-filter="procurement" aria-pressed="false" data-i18n="filterProcurement">САТЫП АЛУ</button></div></div>
-              <div class="news-cards">
-                <a class="news-card" href="https://ayu.edu.kz/kz/haberler/601"><img src="assets/figma-news-601.jpg" alt="ISO 9001:2015 стандарты бойынша аудит жиыны" loading="lazy" /><time class="news-date" datetime="2025-05-14">◷ 14.05.2025</time><div class="news-card-copy"><span class="tag" data-i18n="newsShort">Жаңалықтар</span><h3 data-i18n="newsOne">УНИВЕРСИТЕТІМІЗДЕ ISO 9001:2015 ХАЛЫҚАРАЛЫҚ СТАНДАРТЫ БОЙЫНША СЫРТҚЫ АУДИТТІҢ АШЫЛУ РӘСІМІ ӨТТІ</h3><div class="views">★★★★★</div></div></a>
-                <a class="news-card" href="https://ayu.edu.kz/kz/haberler/599"><img src="assets/figma-news-599.jpg" alt="Түркияға барған оқытушылар" loading="lazy" /><time class="news-date" datetime="2025-05-13">◷ 13.05.2025</time><div class="news-card-copy"><span class="tag" data-i18n="newsShort">Жаңалықтар</span><h3 data-i18n="newsTwo">АДАЛ ЕҢБЕК ЖЕМІСІ: ЕКІНШІ ЛЕК ОҚЫТУШЫЛАРЫ ТҮРКИЯҒА ЖЕТТІ</h3><div class="views">★★★★★</div></div></a>
-                <a class="news-card" href="https://ayu.edu.kz/kz/haberler/597"><img src="assets/figma-news-597.jpg" alt="Түркия сапарынан оралған оқытушылар" loading="lazy" /><time class="news-date" datetime="2025-05-12">◷ 12.05.2025</time><div class="news-card-copy"><span class="tag" data-i18n="newsShort">Жаңалықтар</span><h3 data-i18n="newsThree">ТҮРКИЯҒА САПАР: ОҚЫТУШЫЛАРЫМЫЗ ҮЛКЕН ШАБЫТПЕН ОРАЛДЫ</h3><div class="views">★★★★★</div></div></a>
-                <a class="news-card" href="https://ayu.edu.kz/kz/haberler/598"><img src="assets/figma-news-598.jpg" alt="Республикалық пәндік олимпиада жеңімпаздары" loading="lazy" /><time class="news-date" datetime="2025-05-12">◷ 12.05.2025</time><div class="news-card-copy"><span class="tag" data-i18n="newsShort">Жаңалықтар</span><h3 data-i18n="newsFour">СТУДЕНТТЕРІМІЗ ПӘНДІК ОЛИМПИАДАЛАРДА ТОП ЖАРДЫ</h3><div class="views">★★★★★</div></div></a>
+              <div class="news-tools">
+                <div
+                  class="filter-group"
+                  role="group"
+                  aria-label="Жаңалықтар сүзгісі"
+                >
+                  <button
+                    class="filter-btn"
+                    type="button"
+                    data-filter="all"
+                    aria-pressed="true"
+                    data-i18n="filterAll"
+                  >
+                    ЖАҢАЛЫҚТАР
+                  </button>
+                  <button
+                    class="filter-btn"
+                    type="button"
+                    data-filter="vacancy"
+                    aria-pressed="false"
+                    data-i18n="filterVacancy"
+                  >
+                    ВАКАНСИЯ
+                  </button>
+                  <button
+                    class="filter-btn"
+                    type="button"
+                    data-filter="procurement"
+                    aria-pressed="false"
+                    data-i18n="filterProcurement"
+                  >
+                    САТЫП АЛУ
+                  </button>
+                </div>
               </div>
-              <div class="news-empty" hidden><span data-i18n="newsEmpty">Осы бөлімдегі хабарландырулар университет сайтында жарияланады.</span> <a href="https://ayu.edu.kz/kz/tum_duyurular/" data-i18n="viewAnnouncements">Хабарландыруларды көру →</a></div>
-              <a class="news-more" href="https://ayu.edu.kz/kz/tum_haberler/" data-i18n="allNews">Барлық жаңалықтарды көру үшін басыңыз →</a>
+              <div class="news-cards">
+                <a class="news-card" href="https://ayu.edu.kz/kz/haberler/601">
+                  <img
+                    src="assets/figma-news-601.jpg"
+                    alt="ISO 9001:2015 стандарты бойынша аудит жиыны"
+                    loading="lazy"
+                  />
+                  <time class="news-date" datetime="2025-05-14">
+                    ◷ 14.05.2025
+                  </time>
+                  <div class="news-card-copy">
+                    <span class="tag" data-i18n="newsShort">Жаңалықтар</span>
+                    <h3 data-i18n="newsOne">
+                      УНИВЕРСИТЕТІМІЗДЕ ISO 9001:2015 ХАЛЫҚАРАЛЫҚ СТАНДАРТЫ
+                      БОЙЫНША СЫРТҚЫ АУДИТТІҢ АШЫЛУ РӘСІМІ ӨТТІ
+                    </h3>
+                    <div class="views">★★★★★</div>
+                  </div>
+                </a>
+                <a class="news-card" href="https://ayu.edu.kz/kz/haberler/599">
+                  <img
+                    src="assets/figma-news-599.jpg"
+                    alt="Түркияға барған оқытушылар"
+                    loading="lazy"
+                  />
+                  <time class="news-date" datetime="2025-05-13">
+                    ◷ 13.05.2025
+                  </time>
+                  <div class="news-card-copy">
+                    <span class="tag" data-i18n="newsShort">Жаңалықтар</span>
+                    <h3 data-i18n="newsTwo">
+                      АДАЛ ЕҢБЕК ЖЕМІСІ: ЕКІНШІ ЛЕК ОҚЫТУШЫЛАРЫ ТҮРКИЯҒА ЖЕТТІ
+                    </h3>
+                    <div class="views">★★★★★</div>
+                  </div>
+                </a>
+                <a class="news-card" href="https://ayu.edu.kz/kz/haberler/597">
+                  <img
+                    src="assets/figma-news-597.jpg"
+                    alt="Түркия сапарынан оралған оқытушылар"
+                    loading="lazy"
+                  />
+                  <time class="news-date" datetime="2025-05-12">
+                    ◷ 12.05.2025
+                  </time>
+                  <div class="news-card-copy">
+                    <span class="tag" data-i18n="newsShort">Жаңалықтар</span>
+                    <h3 data-i18n="newsThree">
+                      ТҮРКИЯҒА САПАР: ОҚЫТУШЫЛАРЫМЫЗ ҮЛКЕН ШАБЫТПЕН ОРАЛДЫ
+                    </h3>
+                    <div class="views">★★★★★</div>
+                  </div>
+                </a>
+                <a class="news-card" href="https://ayu.edu.kz/kz/haberler/598">
+                  <img
+                    src="assets/figma-news-598.jpg"
+                    alt="Республикалық пәндік олимпиада жеңімпаздары"
+                    loading="lazy"
+                  />
+                  <time class="news-date" datetime="2025-05-12">
+                    ◷ 12.05.2025
+                  </time>
+                  <div class="news-card-copy">
+                    <span class="tag" data-i18n="newsShort">Жаңалықтар</span>
+                    <h3 data-i18n="newsFour">
+                      СТУДЕНТТЕРІМІЗ ПӘНДІК ОЛИМПИАДАЛАРДА ТОП ЖАРДЫ
+                    </h3>
+                    <div class="views">★★★★★</div>
+                  </div>
+                </a>
+              </div>
+              <div class="news-empty" hidden>
+                <span data-i18n="newsEmpty">
+                  Осы бөлімдегі хабарландырулар университет сайтында
+                  жарияланады.
+                </span>
+                <a
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                  data-i18n="viewAnnouncements"
+                >
+                  Хабарландыруларды көру →
+                </a>
+              </div>
+              <a
+                class="news-more"
+                href="https://ayu.edu.kz/kz/tum_haberler/"
+                data-i18n="allNews"
+              >
+                Барлық жаңалықтарды көру үшін басыңыз →
+              </a>
             </div>
-            <div class="news-aside"><a class="announcement-link" href="https://ayu.edu.kz/kz/tum_duyurular/" data-i18n="announcements">Хабарландырулар</a><aside class="notice-panel" aria-label="Хабарландырулар">
-              <a class="notice-item" href="https://ayu.edu.kz/kz/tum_duyurular/"><span class="notice-symbol notice-logo"><img src="assets/ayu-logo.png" alt="" /></span><span><strong data-i18n="noticeOne">«Өңірдегі журналистика мәселелері»</strong><time datetime="2025-04-29">29.04.2025</time></span></a>
-              <a class="notice-item" href="https://ayu.edu.kz/kz/tum_duyurular/"><span class="notice-symbol notice-schedule"><small>2024–2025<br/>КӨКТЕМГІ<br/>САБАҚ КЕСТЕСІ</small></span><span><strong data-i18n="noticeTwo">Көктемгі сабақ кестесі</strong><time datetime="2025-02-06">06.02.2025</time></span></a>
-              <a class="notice-item" href="https://ayu.edu.kz/kz/tum_duyurular/"><span class="notice-symbol notice-schedule"><small>2024–2025<br/>ЕМТИХАН<br/>КЕСТЕСІ</small></span><span><strong data-i18n="noticeThree">Емтихан кестесі</strong><time datetime="2024-12-03">03.12.2024</time></span></a>
-              <a class="notice-item" href="https://ayu.edu.kz/kz/tum_duyurular/"><span class="notice-symbol notice-logo"><img src="assets/ayu-logo.png" alt="" /></span><span><strong data-i18n="noticeOne">«Өңірдегі журналистика мәселелері»</strong><time datetime="2025-04-29">29.04.2025</time></span></a>
-              <a class="notice-item" href="https://ayu.edu.kz/kz/tum_duyurular/"><span class="notice-symbol notice-schedule"><small>2024–2025<br/>КӨКТЕМГІ<br/>САБАҚ КЕСТЕСІ</small></span><span><strong data-i18n="noticeTwo">Көктемгі сабақ кестесі</strong><time datetime="2025-02-06">06.02.2025</time></span></a>
-              <a class="notice-item" href="https://ayu.edu.kz/kz/tum_duyurular/"><span class="notice-symbol notice-schedule"><small>2024–2025<br/>ЕМТИХАН<br/>КЕСТЕСІ</small></span><span><strong data-i18n="noticeThree">Емтихан кестесі</strong><time datetime="2024-12-03">03.12.2024</time></span></a>
-              <a class="notice-item" href="https://ayu.edu.kz/kz/tum_duyurular/"><span class="notice-symbol notice-logo"><img src="assets/ayu-logo.png" alt="" /></span><span><strong data-i18n="noticeOne">«Өңірдегі журналистика мәселелері»</strong><time datetime="2025-04-29">29.04.2025</time></span></a>
-              <a class="notice-item" href="https://ayu.edu.kz/kz/tum_duyurular/"><span class="notice-symbol notice-schedule"><small>2024–2025<br/>КӨКТЕМГІ<br/>САБАҚ КЕСТЕСІ</small></span><span><strong data-i18n="noticeTwo">Көктемгі сабақ кестесі</strong><time datetime="2025-02-06">06.02.2025</time></span></a>
-              <a class="notice-all" href="https://ayu.edu.kz/kz/tum_duyurular/" data-i18n="allAnnouncements">Барлық хабарландыруларды көру →</a>
-            </aside></div>
+            <div class="news-aside">
+              <a
+                class="announcement-link"
+                href="https://ayu.edu.kz/kz/tum_duyurular/"
+                data-i18n="announcements"
+              >
+                Хабарландырулар
+              </a>
+              <aside class="notice-panel" aria-label="Хабарландырулар">
+                <a
+                  class="notice-item"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                >
+                  <span class="notice-symbol notice-logo">
+                    <img src="assets/ayu-logo.png" alt="" />
+                  </span>
+                  <span>
+                    <strong data-i18n="noticeOne">
+                      «Өңірдегі журналистика мәселелері»
+                    </strong>
+                    <time datetime="2025-04-29">29.04.2025</time>
+                  </span>
+                </a>
+                <a
+                  class="notice-item"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                >
+                  <span class="notice-symbol notice-schedule">
+                    <small>
+                      2024–2025
+                      <br />
+                      КӨКТЕМГІ
+                      <br />
+                      САБАҚ КЕСТЕСІ
+                    </small>
+                  </span>
+                  <span>
+                    <strong data-i18n="noticeTwo">
+                      Көктемгі сабақ кестесі
+                    </strong>
+                    <time datetime="2025-02-06">06.02.2025</time>
+                  </span>
+                </a>
+                <a
+                  class="notice-item"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                >
+                  <span class="notice-symbol notice-schedule">
+                    <small>
+                      2024–2025
+                      <br />
+                      ЕМТИХАН
+                      <br />
+                      КЕСТЕСІ
+                    </small>
+                  </span>
+                  <span>
+                    <strong data-i18n="noticeThree">Емтихан кестесі</strong>
+                    <time datetime="2024-12-03">03.12.2024</time>
+                  </span>
+                </a>
+                <a
+                  class="notice-item"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                >
+                  <span class="notice-symbol notice-logo">
+                    <img src="assets/ayu-logo.png" alt="" />
+                  </span>
+                  <span>
+                    <strong data-i18n="noticeOne">
+                      «Өңірдегі журналистика мәселелері»
+                    </strong>
+                    <time datetime="2025-04-29">29.04.2025</time>
+                  </span>
+                </a>
+                <a
+                  class="notice-item"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                >
+                  <span class="notice-symbol notice-schedule">
+                    <small>
+                      2024–2025
+                      <br />
+                      КӨКТЕМГІ
+                      <br />
+                      САБАҚ КЕСТЕСІ
+                    </small>
+                  </span>
+                  <span>
+                    <strong data-i18n="noticeTwo">
+                      Көктемгі сабақ кестесі
+                    </strong>
+                    <time datetime="2025-02-06">06.02.2025</time>
+                  </span>
+                </a>
+                <a
+                  class="notice-item"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                >
+                  <span class="notice-symbol notice-schedule">
+                    <small>
+                      2024–2025
+                      <br />
+                      ЕМТИХАН
+                      <br />
+                      КЕСТЕСІ
+                    </small>
+                  </span>
+                  <span>
+                    <strong data-i18n="noticeThree">Емтихан кестесі</strong>
+                    <time datetime="2024-12-03">03.12.2024</time>
+                  </span>
+                </a>
+                <a
+                  class="notice-item"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                >
+                  <span class="notice-symbol notice-logo">
+                    <img src="assets/ayu-logo.png" alt="" />
+                  </span>
+                  <span>
+                    <strong data-i18n="noticeOne">
+                      «Өңірдегі журналистика мәселелері»
+                    </strong>
+                    <time datetime="2025-04-29">29.04.2025</time>
+                  </span>
+                </a>
+                <a
+                  class="notice-item"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                >
+                  <span class="notice-symbol notice-schedule">
+                    <small>
+                      2024–2025
+                      <br />
+                      КӨКТЕМГІ
+                      <br />
+                      САБАҚ КЕСТЕСІ
+                    </small>
+                  </span>
+                  <span>
+                    <strong data-i18n="noticeTwo">
+                      Көктемгі сабақ кестесі
+                    </strong>
+                    <time datetime="2025-02-06">06.02.2025</time>
+                  </span>
+                </a>
+                <a
+                  class="notice-all"
+                  href="https://ayu.edu.kz/kz/tum_duyurular/"
+                  data-i18n="allAnnouncements"
+                >
+                  Барлық хабарландыруларды көру →
+                </a>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
-      <section class="media-section" id="media"><div class="container media-layout"><div><div class="media-intro"><div><h2>YASAWI MEDIA</h2><p data-i18n="mediaText">Университет тынысы: подкаст пен бейнематериалдар</p><a href="https://www.youtube.com/@yasawitv1796" data-i18n="visit">Өту →</a></div><div class="media-intro-mark" aria-hidden="true">▶</div></div><div class="video-thumbs"><a class="video-thumb" href="https://www.youtube.com/watch?v=kYAJ5vEhqSM" aria-label="YASAWI MEDIA — бірінші бейне"><img src="assets/media-one.jpg" alt="YASAWI MEDIA бейнематериалы" loading="lazy" /><span class="play-small">▶</span></a><a class="video-thumb" href="https://www.youtube.com/watch?v=qGpNmqsLJN4" aria-label="YASAWI MEDIA — екінші бейне"><img src="assets/media-two.jpg" alt="YASAWI MEDIA студенттер туралы бейне" loading="lazy" /><span class="play-small">▶</span></a></div><div class="media-bottom"><a href="https://www.youtube.com/@yasawitv1796" data-i18n="moreVideos">Толығырақ қарау →</a><a href="https://students.ayu.edu.kz/" data-i18n="academicDept">Академиялық департамент →</a></div></div><div><div class="gazette-card"><h3 data-i18n="newspaper">«Ясауи университеті» газеті</h3><img src="assets/newspaper.png" alt="Ясауи университеті газетінің мұқабасы" loading="lazy" /><a href="https://ayu.edu.kz/kz/4268/gazete-arsivi" data-i18n="readNewspaper">Газетті оқу</a></div><a class="gazette-more" href="https://ayu.edu.kz/kz/4268/gazete-arsivi" data-i18n="moreNewspaper">Толығырақ қарау →</a></div></div></section>
-      <section class="about-section container" id="about"><div class="about-layout"><div class="about-copy"><h2 data-i18n="aboutTitle">Біз туралы</h2><div class="accent"></div><p data-i18n="aboutText">1991 жылы құрылған Қожа Ахмет Ясауи атындағы Халықаралық қазақ-түрік университеті — Қазақстандағы алғашқы халықаралық жоғары оқу орындарының бірі. Университет түркі әлемінің жастарын біріктіріп, білім мен ғылымды дамытуға үлес қосады.</p><a class="about-link" href="https://ayu.edu.kz/kz/" data-i18n="aboutMore">Терең тарихтан жарқын болашаққа →</a></div><div class="about-photo"><img src="assets/about.jpg" alt="Ясауи университетінің студенті" loading="lazy" /></div></div></section>
-      <section class="stats container" aria-label="Университет сандары"><div class="stat"><strong>169</strong><span data-i18n="statPrograms">Білім беру бағдарламасы</span></div><div class="stat"><strong>10 157</strong><span data-i18n="statStudents">Білімгер</span></div><div class="stat"><strong>95,5%</strong><span data-i18n="statEmployment">Жұмыспен қамтылған</span></div><div class="stat"><strong>957</strong><span data-i18n="statFaculty">Оқытушы-профессорлар</span></div></section>
-      <section class="request-section"><h2 data-i18n="requestTitle">Құжаттар, шағым, сұраныстар туралы өтініштер</h2><a href="https://students.ayu.edu.kz/" data-i18n="requestLink">Академиялық департамент →</a></section>
-      <section class="promo-video"><div class="promo-video-content"><a class="promo-play" href="https://www.youtube.com/watch?v=YTtY95JVFBc" aria-label="Университет туралы бейнені көру">▶</a><h2 data-i18n="promoTitle">Ахмет Ясауи университеті туралы жарнамалық бейнеролик</h2></div></section>
-      <div class="contact-strip"><div><small data-i18n="writeUs">Бізге жазыңыз</small><a href="mailto:info@ayu.edu.kz">info@ayu.edu.kz</a></div><span class="or" data-i18n="or">немесе</span><div><small data-i18n="callUs">Бізбен байланысыңыз</small><a href="tel:+77253363636">+7 (725) 336 36 36</a></div></div>
-      <section class="partners container" aria-label="Серіктестер"><div class="partner-row"><a href="https://ayu.edu.kz/kz/"><img src="assets/partner-ayu.png" alt="Ахмет Ясауи университеті" loading="lazy" /></a><a href="https://bilig.yesevi.edu.tr/"><img src="assets/partner-bilig.png" alt="Bilig" loading="lazy" /></a><a href="https://erj.eurasian-research.org/"><img src="assets/partner-erj.png" alt="Eurasian Research Journal" loading="lazy" /></a><a href="https://avesis.ayu.edu.kz/"><img src="assets/partner-avesis.png" alt="AVESIS" loading="lazy" /></a><a href="https://turtep.edu.tr/"><img src="assets/partner-turtep.png" alt="TURTEP" loading="lazy" /></a><a href="https://inp.kz/kz"><img src="assets/partner-inp.png" alt="Institute of Nuclear Physics" loading="lazy" /></a></div></section>
+      <section class="media-section" id="media">
+        <div class="container media-layout">
+          <div>
+            <div class="media-intro">
+              <div>
+                <h2>YASAWI MEDIA</h2>
+                <p data-i18n="mediaText">
+                  Университет тынысы: подкаст пен бейнематериалдар
+                </p>
+                <a
+                  href="https://www.youtube.com/@yasawitv1796"
+                  data-i18n="visit"
+                >
+                  Өту →
+                </a>
+              </div>
+              <div class="media-intro-mark" aria-hidden="true">▶</div>
+            </div>
+            <div class="video-thumbs">
+              <a
+                class="video-thumb"
+                href="https://www.youtube.com/watch?v=kYAJ5vEhqSM"
+                aria-label="YASAWI MEDIA — бірінші бейне"
+              >
+                <img
+                  src="assets/media-one.jpg"
+                  alt="YASAWI MEDIA бейнематериалы"
+                  loading="lazy"
+                />
+                <span class="play-small">▶</span>
+              </a>
+              <a
+                class="video-thumb"
+                href="https://www.youtube.com/watch?v=qGpNmqsLJN4"
+                aria-label="YASAWI MEDIA — екінші бейне"
+              >
+                <img
+                  src="assets/media-two.jpg"
+                  alt="YASAWI MEDIA студенттер туралы бейне"
+                  loading="lazy"
+                />
+                <span class="play-small">▶</span>
+              </a>
+            </div>
+            <div class="media-bottom">
+              <a
+                href="https://www.youtube.com/@yasawitv1796"
+                data-i18n="moreVideos"
+              >
+                Толығырақ қарау →
+              </a>
+              <a href="https://students.ayu.edu.kz/" data-i18n="academicDept">
+                Академиялық департамент →
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="gazette-card">
+              <h3 data-i18n="newspaper">«Ясауи университеті» газеті</h3>
+              <img
+                src="assets/newspaper.png"
+                alt="Ясауи университеті газетінің мұқабасы"
+                loading="lazy"
+              />
+              <a
+                href="https://ayu.edu.kz/kz/4268/gazete-arsivi"
+                data-i18n="readNewspaper"
+              >
+                Газетті оқу
+              </a>
+            </div>
+            <a
+              class="gazette-more"
+              href="https://ayu.edu.kz/kz/4268/gazete-arsivi"
+              data-i18n="moreNewspaper"
+            >
+              Толығырақ қарау →
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="about-section container" id="about">
+        <div class="about-layout">
+          <div class="about-copy">
+            <h2 data-i18n="aboutTitle">Біз туралы</h2>
+            <div class="accent"></div>
+            <p data-i18n="aboutText">
+              1991 жылы құрылған Қожа Ахмет Ясауи атындағы Халықаралық
+              қазақ-түрік университеті — Қазақстандағы алғашқы халықаралық
+              жоғары оқу орындарының бірі. Университет түркі әлемінің жастарын
+              біріктіріп, білім мен ғылымды дамытуға үлес қосады.
+            </p>
+            <a
+              class="about-link"
+              href="https://ayu.edu.kz/kz/"
+              data-i18n="aboutMore"
+            >
+              Терең тарихтан жарқын болашаққа →
+            </a>
+          </div>
+          <div class="about-photo">
+            <img
+              src="assets/about.jpg"
+              alt="Ясауи университетінің студенті"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="stats container" aria-label="Университет сандары">
+        <div class="stat">
+          <strong>169</strong>
+          <span data-i18n="statPrograms">Білім беру бағдарламасы</span>
+        </div>
+        <div class="stat">
+          <strong>10 157</strong>
+          <span data-i18n="statStudents">Білімгер</span>
+        </div>
+        <div class="stat">
+          <strong>95,5%</strong>
+          <span data-i18n="statEmployment">Жұмыспен қамтылған</span>
+        </div>
+        <div class="stat">
+          <strong>957</strong>
+          <span data-i18n="statFaculty">Оқытушы-профессорлар</span>
+        </div>
+      </section>
+      <section class="request-section">
+        <h2 data-i18n="requestTitle">
+          Құжаттар, шағым, сұраныстар туралы өтініштер
+        </h2>
+        <a href="https://students.ayu.edu.kz/" data-i18n="requestLink">
+          Академиялық департамент →
+        </a>
+      </section>
+      <section class="promo-video">
+        <div class="promo-video-content">
+          <a
+            class="promo-play"
+            href="https://www.youtube.com/watch?v=YTtY95JVFBc"
+            aria-label="Университет туралы бейнені көру"
+          >
+            ▶
+          </a>
+          <h2 data-i18n="promoTitle">
+            Ахмет Ясауи университеті туралы жарнамалық бейнеролик
+          </h2>
+        </div>
+      </section>
+      <div class="contact-strip">
+        <div>
+          <small data-i18n="writeUs">Бізге жазыңыз</small>
+          <a href="mailto:info@ayu.edu.kz">info@ayu.edu.kz</a>
+        </div>
+        <span class="or" data-i18n="or">немесе</span>
+        <div>
+          <small data-i18n="callUs">Бізбен байланысыңыз</small>
+          <a href="tel:+77253363636">+7 (725) 336 36 36</a>
+        </div>
+      </div>
+      <section class="partners container" aria-label="Серіктестер">
+        <div class="partner-row">
+          <a href="https://ayu.edu.kz/kz/">
+            <img
+              src="assets/partner-ayu.png"
+              alt="Ахмет Ясауи университеті"
+              loading="lazy"
+            />
+          </a>
+          <a href="https://bilig.yesevi.edu.tr/">
+            <img src="assets/partner-bilig.png" alt="Bilig" loading="lazy" />
+          </a>
+          <a href="https://erj.eurasian-research.org/">
+            <img
+              src="assets/partner-erj.png"
+              alt="Eurasian Research Journal"
+              loading="lazy"
+            />
+          </a>
+          <a href="https://avesis.ayu.edu.kz/">
+            <img src="assets/partner-avesis.png" alt="AVESIS" loading="lazy" />
+          </a>
+          <a href="https://turtep.edu.tr/">
+            <img src="assets/partner-turtep.png" alt="TURTEP" loading="lazy" />
+          </a>
+          <a href="https://inp.kz/kz">
+            <img
+              src="assets/partner-inp.png"
+              alt="Institute of Nuclear Physics"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </section>
     </main>
-    <footer id="footer"><div class="container footer-row"><div class="footer-brand-column"><a class="footer-brand" href="#top"><img src="assets/ayu-logo-white.png" alt="Ахмет Ясауи университеті" /><strong>Ахмет Ясауи университеті</strong></a><p data-i18n="footerText">Түркі әлемінің жарқын жұлдызы</p><p data-i18n="address">Адрес: Түркістан қаласы, Бекзат Саттарханов даңғылы, 29<br />Телефон: +7 (72533) 9-71-00<br />Электрондық пошта: info@ayu.edu.kz</p></div><div><h3>Online Platform</h3><nav class="footer-links"><a href="https://platonus.ayu.edu.kz/">AYU Portal</a><a href="https://yassawifm.airtime.pro/">Yassawi FM</a><a href="https://publications.ayu.edu.kz/">AYU Journals</a><a href="https://mail.google.com/a/ayu.edu.kz">E-Mail</a><a href="https://business.documentolog.kz/login/">Documentolog</a><a href="https://ayu.edu.kz/kz/4265/yesevi-universitesi-gazetesi/" data-i18n="paperShort">Газет</a><a href="https://old.ayu.edu.kz/" data-i18n="oldSite">Ескі вебсайт</a><a href="https://ayu.edu.kz/kz/4426/devletlik-hizmetler" data-i18n="publicServices">Мемлекеттік қызметтер</a></nav></div><div><h3 data-i18n="faculties">Факультеттер</h3><nav class="footer-links"><a href="#faculties" data-i18n="facultyOne">Стоматология факультеті</a><a href="#faculties" data-i18n="facultyTwo">Жаратылыстану ғылымдары факультеті</a><a href="#faculties" data-i18n="facultyThree">Филология факультеті</a><a href="#faculties" data-i18n="facultyFour">Дайындық орталығы</a><a href="#faculties" data-i18n="facultyFive">Экономика, басқару және құқық факультеті</a><a href="#faculties" data-i18n="facultySix">Теология факультеті</a><a href="#faculties" data-i18n="facultySeven">Әлеуметтік-гуманитарлық ғылымдар факультеті</a><a href="#faculties" data-i18n="facultyEight">Жоғары медициналық білімнен кейінгі білім беру</a><a href="#faculties" data-i18n="facultyNine">Инженерия факультеті</a><a href="#faculties" data-i18n="facultyTen">Спорт және өнер факультеті</a><a href="#faculties" data-i18n="facultyEleven">Медицина факультеті</a></nav></div><div><h3 data-i18n="location">Орналасуы</h3><iframe class="footer-map" title="Ясауи университетінің орналасуы" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.68304090844!2d68.2980509607512!3d43.28969307574584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4200c26359132241%3A0xdc1feb36390d230f!2z0JzQtdC20LTRg9C90LDRgNC-0LTQvdGL0Lkg0JrQsNC30LDRhdGB0LrQvi3QotGD0YDQtdGG0LrQuNC5INCj0L3QuNCy0LXRgNGB0LjRgtC10YIg0LjQvC4g0KXQvtC00LbQsCDQkNGF0LzQtdGCINCv0YHQsNGD0Lg!5e0!3m2!1sru!2skz!4v1775190679812!5m2!1sru!2skz"></iframe></div></div><div class="container footer-bottom"><a href="https://ayu.edu.kz/kz/">Designed &amp; Developed by AYU Software Innovation Office</a></div></footer>
-    <script>
-      const translations = {
-        kz: {
-          foreign:'Шетелдік студенттер', applicants:'Талапкерлерге', graduates:'Түлек', quality:'Сапасы', library:'Кітапхана', contactsShort:'Жедел байланыстар',
-          motto:'"Ілім — жүрек жарығы, ақылға шырақ"<br><small>Ахмет Ясауи</small>', search:'Іздеу', foreignRegistration:'Шетелдік студенттер тіркелуі',
-          home:'Басты бет', university:'Университетіміз', academic:'Академиялық', institutes:'Институттар', science:'Ғылым', excellence:'Академиялық үстемдік орталығы', students:'Студенттер үшін', contact:'Байланыс',
-          welcome:'АХМЕТ ЯСАУИ УНИВЕРСИТЕТІНЕ ҚОШ КЕЛДІҢІЗ!', heroTitle:'Түркі Әлемінің<br>Жарқыраған Жұлдызы',
-          benefitOne:'Шәкіртақы алу мүмкіндігі', benefitOneText:'Біздің университет өз студенттеріне түрлі ұйымдардан шәкіртақы ұсынады.', benefitTwo:'Бағдарламалар', benefitTwoText:'Көптеген ғылыми салаларда мол еңбектерін жариялаған таңдаулы оқытушылар.', benefitThreeText:'Іріктеулі кітаптарды қамтитын университет кітапханасы.',
-          faculties:'Факультеттер', facultyOne:'Стоматология факультеті', facultyTwo:'Жаратылыстану ғылымдары факультеті', facultyThree:'Филология факультеті', facultyFour:'Дайындық орталығы', facultyFive:'Экономика, басқару және құқық факультеті', facultySix:'Теология факультеті', facultySeven:'Әлеуметтік-гуманитарлық ғылымдар факультеті', facultyEight:'Жоғары медициналық білімнен кейінгі білім беру', facultyNine:'Инженерия факультеті',
-          news:'Университет жаңалықтары', allNews:'Барлық жаңалықтар →', dateOne:'24 ҚЫРКҮЙЕК 2026', dateTwo:'22 ҚЫРКҮЙЕК 2026', dateThree:'19 ҚЫРКҮЙЕК 2026', newsOne:'Жаңа оқу жылы: мүмкіндіктер мен жаңашыл бастамалар', newsTwo:'Зерттеу жобаларына өтінім қабылдау басталды', newsThree:'Студенттерге арналған мәдениет апталығы', footerText:'Білім, ғылым және рухани құндылықтарды бір арнаға тоғыстырған университет.', address:'Түркістан қаласы, Б. Саттарханов даңғылы<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
-        },
-        tr: {
-          foreign:'Uluslararası öğrenciler', applicants:'Aday öğrenciler', graduates:'Mezunlar', quality:'Kalite', library:'Kütüphane', contactsShort:'Hızlı bağlantılar',
-          motto:'"İlim kalbin ışığı, aklın kandilidir."<br><small>Ahmet Yesevi</small>', search:'Ara', foreignRegistration:'Uluslararası öğrenci kaydı',
-          home:'Ana sayfa', university:'Üniversitemiz', academic:'Akademik', institutes:'Enstitüler', science:'Bilim', excellence:'Akademik mükemmeliyet merkezi', students:'Öğrenciler için', contact:'İletişim',
-          welcome:'AHMET YESEVİ ÜNİVERSİTESİNE HOŞ GELDİNİZ!', heroTitle:'Türk Dünyasının<br>Parlayan Yıldızı',
-          benefitOne:'Burs imkânı', benefitOneText:'Üniversitemiz öğrencilerine farklı kuruluşlardan burs imkânı sunar.', benefitTwo:'Programlar', benefitTwoText:'Birçok bilim alanında eser vermiş seçkin öğretim üyeleri.', benefitThreeText:'Seçkin kaynakları içeren üniversite kütüphanesi.',
-          faculties:'Fakülteler', facultyOne:'Diş Hekimliği Fakültesi', facultyTwo:'Fen Bilimleri Fakültesi', facultyThree:'Filoloji Fakültesi', facultyFour:'Hazırlık Merkezi', facultyFive:'Ekonomi, Yönetim ve Hukuk Fakültesi', facultySix:'İlahiyat Fakültesi', facultySeven:'Sosyal ve Beşeri Bilimler Fakültesi', facultyEight:'Lisansüstü Tıp Eğitimi', facultyNine:'Mühendislik Fakültesi',
-          news:'Üniversite haberleri', allNews:'Tüm haberler →', dateOne:'24 EYLÜL 2026', dateTwo:'22 EYLÜL 2026', dateThree:'19 EYLÜL 2026', newsOne:'Yeni akademik yıl: fırsatlar ve yenilikçi girişimler', newsTwo:'Araştırma projeleri için başvurular başladı', newsThree:'Öğrenciler için kültür haftası', footerText:'Eğitim, bilim ve manevi değerleri bir araya getiren üniversite.', address:'Türkistan şehri, B. Sattarkhanov caddesi<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
-        },
-        en: {
-          foreign:'International students', applicants:'Applicants', graduates:'Alumni', quality:'Quality', library:'Library', contactsShort:'Quick links',
-          motto:'"Knowledge is the light of the heart and a lamp for the mind."<br><small>Ahmet Yassawi</small>', search:'Search', foreignRegistration:'International student registration',
-          home:'Home', university:'Our university', academic:'Academic', institutes:'Institutes', science:'Science', excellence:'Academic excellence centre', students:'For students', contact:'Contact',
-          welcome:'WELCOME TO AHMET YASSAWI UNIVERSITY!', heroTitle:'The Shining Star<br>of the Turkic World',
-          benefitOne:'Scholarship opportunities', benefitOneText:'Our university offers students scholarships from a range of organisations.', benefitTwo:'Programmes', benefitTwoText:'Outstanding faculty members with experience across many scientific fields.', benefitThreeText:'The university library with a carefully selected collection.',
-          faculties:'Faculties', facultyOne:'Faculty of Dentistry', facultyTwo:'Faculty of Natural Sciences', facultyThree:'Faculty of Philology', facultyFour:'Preparatory Centre', facultyFive:'Faculty of Economics, Management and Law', facultySix:'Faculty of Theology', facultySeven:'Faculty of Social Sciences and Humanities', facultyEight:'Postgraduate Medical Education', facultyNine:'Faculty of Engineering',
-          news:'University news', allNews:'All news →', dateOne:'24 SEPTEMBER 2026', dateTwo:'22 SEPTEMBER 2026', dateThree:'19 SEPTEMBER 2026', newsOne:'New academic year: opportunities and forward-looking initiatives', newsTwo:'Applications for research projects are now open', newsThree:'Culture week for students', footerText:'A university that brings together education, science and spiritual values.', address:'Turkistan, B. Sattarkhanov Avenue<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
-        },
-        ru: {
-          foreign:'Иностранные студенты', applicants:'Абитуриентам', graduates:'Выпускникам', quality:'Качество', library:'Библиотека', contactsShort:'Быстрые ссылки',
-          motto:'"Знание — свет сердца, светильник для разума."<br><small>Ахмет Ясауи</small>', search:'Поиск', foreignRegistration:'Регистрация иностранных студентов',
-          home:'Главная', university:'Университет', academic:'Академическое', institutes:'Институты', science:'Наука', excellence:'Центр академического превосходства', students:'Студентам', contact:'Контакты',
-          welcome:'ДОБРО ПОЖАЛОВАТЬ В УНИВЕРСИТЕТ АХМЕТА ЯСАУИ!', heroTitle:'Яркая звезда<br>Тюркского мира',
-          benefitOne:'Возможность получить стипендию', benefitOneText:'Наш университет предлагает студентам стипендии от разных организаций.', benefitTwo:'Программы', benefitTwoText:'Выдающиеся преподаватели с опытом работы в разных научных областях.', benefitThreeText:'Университетская библиотека с тщательно отобранными книгами.',
-          faculties:'Факультеты', facultyOne:'Стоматологический факультет', facultyTwo:'Факультет естественных наук', facultyThree:'Филологический факультет', facultyFour:'Подготовительный центр', facultyFive:'Факультет экономики, управления и права', facultySix:'Факультет теологии', facultySeven:'Факультет социальных и гуманитарных наук', facultyEight:'Последипломное медицинское образование', facultyNine:'Инженерный факультет',
-          news:'Новости университета', allNews:'Все новости →', dateOne:'24 СЕНТЯБРЯ 2026', dateTwo:'22 СЕНТЯБРЯ 2026', dateThree:'19 СЕНТЯБРЯ 2026', newsOne:'Новый учебный год: возможности и новые инициативы', newsTwo:'Открыт приём заявок на исследовательские проекты', newsThree:'Неделя культуры для студентов', footerText:'Университет, объединяющий образование, науку и духовные ценности.', address:'г. Туркестан, проспект Б. Саттарханова<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
-        }
-      };
-      Object.assign(translations.kz, {
-        ribbon:'ТЕРЕҢ ТАРИХТАН ЖАРҚЫН БОЛАШАҚҚА!', news:'Жаңалықтар &amp; Хабарландырулар', newsShort:'Жаңалықтар', filterAll:'Барлығы', filterCampus:'Кампус', announcements:'Хабарландырулар',
-        newsOne:'Университет музейіндегі динозавр қаңқасы палеонтологтардың назарына ілікті', newsTwo:'«Ерен еңбегі үшін»: оқытушымыз Президент қолынан марапат алды', newsThree:'Өкілетті кеңес төрағасы университет кітапханасын аралады', newsFour:'Студенттер арасындағы дәстүрлі спартакиада басталды', allNews:'Барлық жаңалықтар →',
-        noticeOne:'Халықаралық симпозиум', noticeTwo:'Ғылыми жобалар аясындағы сатып алу хабарландыруы', noticeThree:'Өнер, медиа және дизайн кафедрасы конкурс жариялайды', noticeFour:'Ғылыми жобалар бойынша хабарландыру', allAnnouncements:'Барлық хабарландырулар →',
-        mediaText:'Университет тынысы: подкаст пен бейнематериалдар', visit:'Өту →', moreVideos:'Толығырақ қарау →', academicDept:'Академиялық департамент →', newspaper:'«Ясауи университеті» газеті', readNewspaper:'Газетті оқу', moreNewspaper:'Толығырақ қарау →',
-        aboutTitle:'Біз туралы', aboutText:'1991 жылы құрылған Қожа Ахмет Ясауи атындағы Халықаралық қазақ-түрік университеті — Қазақстандағы алғашқы халықаралық жоғары оқу орындарының бірі. Университет түркі әлемінің жастарын біріктіріп, білім мен ғылымды дамытуға үлес қосады.', aboutMore:'Терең тарихтан жарқын болашаққа →',
-        statPrograms:'Білім беру бағдарламасы', statStudents:'Білімгер', statEmployment:'Жұмыспен қамтылған', statFaculty:'Оқытушы-профессорлар', requestTitle:'Құжаттар, шағым, сұраныстар туралы өтініштер', requestLink:'Академиялық департамент →', promoTitle:'Ахмет Ясауи университеті туралы жарнамалық бейнеролик', writeUs:'Бізге жазыңыз', or:'немесе', callUs:'Бізбен байланысыңыз', footerLinks:'Жылдам сілтемелер', location:'Орналасуы', footerText:'Түркі әлемінің жарқын жұлдызы', address:'Түркістан қаласы, Б. Саттарханов даңғылы, 29<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
-      });
-      Object.assign(translations.tr, {
-        ribbon:'KÖKLÜ TARİHTEN AYDINLIK GELECEĞE!', news:'Haberler ve Duyurular', newsShort:'Haberler', filterAll:'Tümü', filterCampus:'Kampüs', announcements:'Duyurular',
-        newsOne:'Üniversite müzesindeki dinozor iskeleti paleontologların ilgisini çekti', newsTwo:'Öğretim üyemiz Cumhurbaşkanı tarafından ödüllendirildi', newsThree:'Mütevelli Heyeti Başkanı üniversite kütüphanesini ziyaret etti', newsFour:'Öğrenciler arası geleneksel spor yarışmaları başladı', allNews:'Tüm haberler →',
-        noticeOne:'Uluslararası sempozyum', noticeTwo:'Bilimsel projeler kapsamında satın alma duyurusu', noticeThree:'Sanat, medya ve tasarım bölümü yarışma ilanı', noticeFour:'Bilimsel projeler hakkında duyuru', allAnnouncements:'Tüm duyurular →',
-        mediaText:'Üniversiteden podcast ve videolar', visit:'Ziyaret et →', moreVideos:'Daha fazlası →', academicDept:'Akademik bölüm →', newspaper:'Yesevi Üniversitesi gazetesi', readNewspaper:'Gazeteyi oku', moreNewspaper:'Daha fazlası →',
-        aboutTitle:'Hakkımızda', aboutText:'1991 yılında kurulan Hoca Ahmet Yesevi Uluslararası Türk-Kazak Üniversitesi, Kazakistan’ın ilk uluslararası yükseköğretim kurumlarından biridir. Üniversite, Türk dünyasının gençlerini bir araya getirerek eğitim ve bilimin gelişimine katkı sağlar.', aboutMore:'Köklü tarihten aydınlık geleceğe →',
-        statPrograms:'Eğitim programı', statStudents:'Öğrenci', statEmployment:'İstihdam oranı', statFaculty:'Öğretim üyesi', requestTitle:'Belgeler, şikâyetler ve talepler için başvurular', requestLink:'Akademik bölüm →', promoTitle:'Ahmet Yesevi Üniversitesi tanıtım filmi', writeUs:'Bize yazın', or:'veya', callUs:'Bizi arayın', footerLinks:'Hızlı bağlantılar', location:'Konum', footerText:'Türk dünyasının parlayan yıldızı', address:'Türkistan, B. Sattarkhanov Caddesi 29<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
-      });
-      Object.assign(translations.en, {
-        ribbon:'FROM A RICH HISTORY TO A BRIGHT FUTURE!', news:'News &amp; Announcements', newsShort:'News', filterAll:'All', filterCampus:'Campus', announcements:'Announcements',
-        newsOne:'Dinosaur skeleton in the university museum draws paleontologists’ attention', newsTwo:'Our lecturer receives an award from the President', newsThree:'Board chair visits the university library', newsFour:'Traditional interfaculty student games begin', allNews:'All news →',
-        noticeOne:'International symposium', noticeTwo:'Procurement notice for research projects', noticeThree:'Art, media and design department announces a competition', noticeFour:'Research project announcement', allAnnouncements:'All announcements →',
-        mediaText:'Podcasts and videos from university life', visit:'Visit →', moreVideos:'Watch more →', academicDept:'Academic department →', newspaper:'Yassawi University newspaper', readNewspaper:'Read newspaper', moreNewspaper:'Learn more →',
-        aboutTitle:'About us', aboutText:'Founded in 1991, Khoja Akhmet Yassawi International Kazakh-Turkish University is one of Kazakhstan’s first international universities. It brings young people from the Turkic world together and advances education and research.', aboutMore:'From a rich history to a bright future →',
-        statPrograms:'Education programmes', statStudents:'Students', statEmployment:'Employment rate', statFaculty:'Faculty members', requestTitle:'Requests for documents, complaints and enquiries', requestLink:'Academic department →', promoTitle:'Discover Ahmet Yassawi University', writeUs:'Email us', or:'or', callUs:'Call us', footerLinks:'Quick links', location:'Location', footerText:'The shining star of the Turkic world', address:'29 B. Sattarkhanov Avenue, Turkistan<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
-      });
-      Object.assign(translations.ru, {
-        ribbon:'ОТ БОГАТОЙ ИСТОРИИ К СВЕТЛОМУ БУДУЩЕМУ!', news:'Новости и объявления', newsShort:'Новости', filterAll:'Все', filterCampus:'Кампус', announcements:'Объявления',
-        newsOne:'Скелет динозавра в музее университета привлёк внимание палеонтологов', newsTwo:'Наш преподаватель получил награду из рук Президента', newsThree:'Председатель попечительского совета посетил библиотеку университета', newsFour:'Началась традиционная спартакиада среди студентов', allNews:'Все новости →',
-        noticeOne:'Международный симпозиум', noticeTwo:'Объявление о закупках для научных проектов', noticeThree:'Кафедра искусства, медиа и дизайна объявляет конкурс', noticeFour:'Объявление по научным проектам', allAnnouncements:'Все объявления →',
-        mediaText:'Жизнь университета: подкасты и видео', visit:'Перейти →', moreVideos:'Смотреть ещё →', academicDept:'Академический департамент →', newspaper:'Газета «Университет Ясауи»', readNewspaper:'Читать газету', moreNewspaper:'Подробнее →',
-        aboutTitle:'О нас', aboutText:'Международный казахско-турецкий университет имени Ходжи Ахмеда Ясауи, основанный в 1991 году, — один из первых международных вузов Казахстана. Университет объединяет молодёжь тюркского мира и развивает образование и науку.', aboutMore:'От богатой истории к светлому будущему →',
-        statPrograms:'Образовательные программы', statStudents:'Студенты', statEmployment:'Трудоустройство', statFaculty:'Преподаватели', requestTitle:'Заявления на документы, жалобы и запросы', requestLink:'Академический департамент →', promoTitle:'Видео об Университете Ахмета Ясауи', writeUs:'Напишите нам', or:'или', callUs:'Позвоните нам', footerLinks:'Быстрые ссылки', location:'Местоположение', footerText:'Яркая звезда тюркского мира', address:'г. Туркестан, проспект Б. Саттарханова, 29<br>+7 (725) 336 36 36<br>info@ayu.edu.kz'
-      });
-      Object.assign(translations.kz, { facultyTen:'Спорт және өнер факультеті',facultyEleven:'Медицина факультеті',facultyTwelve:'Бағдарламалар',newsOne:'УНИВЕРСИТЕТІМІЗДЕ ISO 9001:2015 ХАЛЫҚАРАЛЫҚ СТАНДАРТЫ БОЙЫНША СЫРТҚЫ АУДИТТІҢ АШЫЛУ РӘСІМІ ӨТТІ',newsTwo:'АДАЛ ЕҢБЕК ЖЕМІСІ: ЕКІНШІ ЛЕК ОҚЫТУШЫЛАРЫ ТҮРКИЯҒА ЖЕТТІ',newsThree:'ТҮРКИЯҒА САПАР: ОҚЫТУШЫЛАРЫМЫЗ ҮЛКЕН ШАБЫТПЕН ОРАЛДЫ',newsFour:'СТУДЕНТТЕРІМІЗ ПӘНДІК ОЛИМПИАДАЛАРДА ТОП ЖАРДЫ',paperShort:'Газет',oldSite:'Ескі вебсайт',publicServices:'Мемлекеттік қызметтер',footerText:'Түркі әлемінің жарқын жұлдызы',address:'Адрес: Түркістан қаласы, Бекзат Саттарханов даңғылы, 29<br>Телефон: +7 (72533) 9-71-00<br>Электрондық пошта: info@ayu.edu.kz' });
-      Object.assign(translations.tr, { facultyTen:'Spor ve Sanat Fakültesi',facultyEleven:'Tıp Fakültesi',facultyTwelve:'Programlar',newsOne:'ÜNİVERSİTEMİZDE ISO 9001:2015 STANDARDI KAPSAMINDA DIŞ DENETİMİN AÇILIŞI',newsTwo:'EMEĞİN KARŞILIĞI: İKİNCİ ÖĞRETİM ÜYESİ GRUBU TÜRKİYE’YE ULAŞTI',newsThree:'TÜRKİYE ZİYARETİ: ÖĞRETİM ÜYELERİMİZ BÜYÜK İLHAMLA DÖNDÜ',newsFour:'ÖĞRENCİLERİMİZ ULUSAL ALAN OLİMPİYATLARINDA BAŞARI KAZANDI',paperShort:'Gazete',oldSite:'Eski web sitesi',publicServices:'Kamu hizmetleri',footerText:'Türk dünyasının parlayan yıldızı',address:'Adres: Türkistan, Bekzat Sattarkhanov Caddesi 29<br>Telefon: +7 (72533) 9-71-00<br>E-posta: info@ayu.edu.kz' });
-      Object.assign(translations.en, { facultyTen:'Faculty of Sport and Arts',facultyEleven:'Faculty of Medicine',facultyTwelve:'Programmes',newsOne:'OPENING OF THE EXTERNAL ISO 9001:2015 AUDIT AT OUR UNIVERSITY',newsTwo:'THE FRUIT OF HARD WORK: SECOND GROUP OF LECTURERS ARRIVES IN TÜRKİYE',newsThree:'TÜRKİYE VISIT: OUR LECTURERS RETURN INSPIRED',newsFour:'OUR STUDENTS EXCEL AT NATIONAL SUBJECT OLYMPIADS',paperShort:'Newspaper',oldSite:'Old website',publicServices:'Public services',footerText:'The shining star of the Turkic world',address:'Address: 29 Bekzat Sattarkhanov Avenue, Turkistan<br>Phone: +7 (72533) 9-71-00<br>Email: info@ayu.edu.kz' });
-      Object.assign(translations.ru, { facultyTen:'Факультет спорта и искусств',facultyEleven:'Медицинский факультет',facultyTwelve:'Программы',newsOne:'В УНИВЕРСИТЕТЕ ОТКРЫЛСЯ ВНЕШНИЙ АУДИТ ПО СТАНДАРТУ ISO 9001:2015',newsTwo:'ПЛОДЫ ТРУДА: ВТОРАЯ ГРУППА ПРЕПОДАВАТЕЛЕЙ ПРИБЫЛА В ТУРЦИЮ',newsThree:'ПОЕЗДКА В ТУРЦИЮ: ПРЕПОДАВАТЕЛИ ВЕРНУЛИСЬ С ВДОХНОВЕНИЕМ',newsFour:'НАШИ СТУДЕНТЫ ПОБЕДИЛИ НА РЕСПУБЛИКАНСКИХ ПРЕДМЕТНЫХ ОЛИМПИАДАХ',paperShort:'Газета',oldSite:'Старый сайт',publicServices:'Государственные услуги',footerText:'Яркая звезда тюркского мира',address:'Адрес: г. Туркестан, проспект Бекзата Саттарханова, 29<br>Телефон: +7 (72533) 9-71-00<br>Электронная почта: info@ayu.edu.kz' });
-      Object.assign(translations.kz, {filterAll:'ЖАҢАЛЫҚТАР',filterVacancy:'ВАКАНСИЯ',filterProcurement:'САТЫП АЛУ',allNews:'Барлық жаңалықтарды көру үшін басыңыз →',noticeOne:'«Өңірдегі журналистика мәселелері»',noticeTwo:'Көктемгі сабақ кестесі',noticeThree:'Емтихан кестесі',allAnnouncements:'Барлық хабарландыруларды көру →',newsEmpty:'Осы бөлімдегі хабарландырулар университет сайтында жарияланады.',viewAnnouncements:'Хабарландыруларды көру →'});
-      Object.assign(translations.tr, {filterAll:'HABERLER',filterVacancy:'İŞ İLANLARI',filterProcurement:'SATIN ALMA',allNews:'Tüm haberleri görmek için tıklayın →',noticeOne:'Bölgesel gazetecilik sorunları',noticeTwo:'Bahar ders programı',noticeThree:'Sınav programı',allAnnouncements:'Tüm duyuruları görüntüle →',newsEmpty:'Bu bölümdeki duyurular üniversitenin sitesinde yayımlanır.',viewAnnouncements:'Duyuruları görüntüle →'});
-      Object.assign(translations.en, {filterAll:'NEWS',filterVacancy:'VACANCIES',filterProcurement:'PROCUREMENT',allNews:'Click to see all news →',noticeOne:'Regional journalism issues',noticeTwo:'Spring class schedule',noticeThree:'Exam schedule',allAnnouncements:'View all announcements →',newsEmpty:'Notices in this category are published on the university website.',viewAnnouncements:'View announcements →'});
-      Object.assign(translations.ru, {filterAll:'НОВОСТИ',filterVacancy:'ВАКАНСИИ',filterProcurement:'ЗАКУПКИ',allNews:'Смотреть все новости →',noticeOne:'«Вопросы региональной журналистики»',noticeTwo:'Расписание весенних занятий',noticeThree:'Расписание экзаменов',allAnnouncements:'Смотреть все объявления →',newsEmpty:'Объявления этого раздела публикуются на сайте университета.',viewAnnouncements:'Смотреть объявления →'});
-      const setLanguage = lang => {
-        const copy = translations[lang] || translations.kz;
-        document.documentElement.lang = lang;
-        document.querySelectorAll('[data-i18n]').forEach(node => { node.innerHTML = copy[node.dataset.i18n] || node.innerHTML; });
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(node => { const value = copy[node.dataset.i18nPlaceholder] || node.placeholder; node.placeholder = value; node.setAttribute('aria-label', value); });
-        document.querySelectorAll('[data-lang]').forEach(node => node.classList.toggle('active', node.dataset.lang === lang));
-        localStorage.setItem('ayu-language', lang);
-      };
-      document.querySelectorAll('[data-lang]').forEach(node => node.addEventListener('click', event => { event.preventDefault(); setLanguage(node.dataset.lang); }));
-      setLanguage(localStorage.getItem('ayu-language') || 'kz');
-      document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-        const category = button.dataset.filter;
-        document.querySelectorAll('[data-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-        document.querySelector('.news-cards').hidden = category !== 'all';
-        document.querySelector('.news-empty').hidden = category === 'all';
-        document.querySelector('.news-more').hidden = category !== 'all';
-      }));
-      const menu = document.getElementById('main-menu'); const toggle = document.querySelector('.hamburger');
-      toggle.addEventListener('click', () => { const open = menu.classList.toggle('open'); toggle.setAttribute('aria-expanded', open); toggle.textContent = open ? '×' : '☰'; });
-      document.querySelectorAll('[data-message]').forEach(btn => btn.addEventListener('click', () => alert(btn.dataset.message)));
-      let slide=0;
-      const change = direction => { slide=(slide+direction+2)%2; const lang=localStorage.getItem('ayu-language') || 'kz'; document.querySelector('h1').innerHTML=translations[lang].heroTitle; };
-      document.getElementById('next').addEventListener('click', () => change(1)); document.getElementById('previous').addEventListener('click', () => change(-1));
-    </script>
+    <footer id="footer">
+      <div class="container footer-row">
+        <div class="footer-brand-column">
+          <a class="footer-brand" href="#top">
+            <img
+              src="assets/ayu-logo-white.png"
+              alt="Ахмет Ясауи университеті"
+            />
+            <strong>Ахмет Ясауи университеті</strong>
+          </a>
+          <p data-i18n="footerText">Түркі әлемінің жарқын жұлдызы</p>
+          <p data-i18n="address">
+            Адрес: Түркістан қаласы, Бекзат Саттарханов даңғылы, 29
+            <br />
+            Телефон: +7 (72533) 9-71-00
+            <br />
+            Электрондық пошта: info@ayu.edu.kz
+          </p>
+        </div>
+        <div>
+          <h3>Online Platform</h3>
+          <nav class="footer-links">
+            <a href="https://platonus.ayu.edu.kz/">AYU Portal</a>
+            <a href="https://yassawifm.airtime.pro/">Yassawi FM</a>
+            <a href="https://publications.ayu.edu.kz/">AYU Journals</a>
+            <a href="https://mail.google.com/a/ayu.edu.kz">E-Mail</a>
+            <a href="https://business.documentolog.kz/login/">Documentolog</a>
+            <a
+              href="https://ayu.edu.kz/kz/4265/yesevi-universitesi-gazetesi/"
+              data-i18n="paperShort"
+            >
+              Газет
+            </a>
+            <a href="https://old.ayu.edu.kz/" data-i18n="oldSite">
+              Ескі вебсайт
+            </a>
+            <a
+              href="https://ayu.edu.kz/kz/4426/devletlik-hizmetler"
+              data-i18n="publicServices"
+            >
+              Мемлекеттік қызметтер
+            </a>
+          </nav>
+        </div>
+        <div>
+          <h3 data-i18n="faculties">Факультеттер</h3>
+          <nav class="footer-links">
+            <a href="#faculties" data-i18n="facultyOne">
+              Стоматология факультеті
+            </a>
+            <a href="#faculties" data-i18n="facultyTwo">
+              Жаратылыстану ғылымдары факультеті
+            </a>
+            <a href="#faculties" data-i18n="facultyThree">
+              Филология факультеті
+            </a>
+            <a href="#faculties" data-i18n="facultyFour">Дайындық орталығы</a>
+            <a href="#faculties" data-i18n="facultyFive">
+              Экономика, басқару және құқық факультеті
+            </a>
+            <a href="#faculties" data-i18n="facultySix">Теология факультеті</a>
+            <a href="#faculties" data-i18n="facultySeven">
+              Әлеуметтік-гуманитарлық ғылымдар факультеті
+            </a>
+            <a href="#faculties" data-i18n="facultyEight">
+              Жоғары медициналық білімнен кейінгі білім беру
+            </a>
+            <a href="#faculties" data-i18n="facultyNine">
+              Инженерия факультеті
+            </a>
+            <a href="#faculties" data-i18n="facultyTen">
+              Спорт және өнер факультеті
+            </a>
+            <a href="#faculties" data-i18n="facultyEleven">
+              Медицина факультеті
+            </a>
+          </nav>
+        </div>
+        <div>
+          <h3 data-i18n="location">Орналасуы</h3>
+          <iframe
+            class="footer-map"
+            title="Ясауи университетінің орналасуы"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.68304090844!2d68.2980509607512!3d43.28969307574584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4200c26359132241%3A0xdc1feb36390d230f!2z0JzQtdC20LTRg9C90LDRgNC-0LTQvdGL0Lkg0JrQsNC30LDRhdGB0LrQvi3QotGD0YDQtdGG0LrQuNC5INCj0L3QuNCy0LXRgNGB0LjRgtC10YIg0LjQvC4g0KXQvtC00LbQsCDQkNGF0LzQtdGCINCv0YHQsNGD0Lg!5e0!3m2!1sru!2skz!4v1775190679812!5m2!1sru!2skz"
+          ></iframe>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <a href="https://ayu.edu.kz/kz/">
+          Designed &amp; Developed by AYU Software Innovation Office
+        </a>
+      </div>
+    </footer>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
